@@ -1,0 +1,8 @@
+# Source PDFs are not needed for the website (all questions are extracted inside index.html).
+# Delete the line below if you want the PDFs published in the repo too.
+ans/
+
+node_modules/
+.DS_Store
+Thumbs.db
+*.log

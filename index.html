@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Display Technologies — Quiz</title>
+<meta name="description" content="Assignment-wise, random and complete quiz tests for the NPTEL course 'Modern Display Technologies: Flat Panel Displays' — instant answers, explanations and live stats.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='0' y='14' font-size='14'%3E%F0%9F%93%BA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<div id="root"><noscript style="color:#ef4444">Please enable JavaScript to use the quiz.</noscript></div>
+<script>
+window.QUESTIONS = [
+{id:"w1q1",a:1,name:"Assignment 1",q:"Which of the following statements correctly distinguishes between emissive and non-emissive displays?",opts:["Emissive displays require an external backlight to produce images, whereas non-emissive displays emit light directly from each pixel.","LCDs and E-paper are examples of emissive displays, while OLEDs and Micro-LEDs are non-emissive.","Emissive displays generate light directly from each pixel (e.g., OLED, Micro-LED), while non-emissive displays rely on an external light source or ambient light (e.g., LCD, E-paper).","Non-emissive displays generally offer an infinite contrast ratio in completely dark viewing conditions without any light leakage."],correct:2,exp:null},
+{id:"w1q2",a:1,name:"Assignment 1",q:"In the context of the physical properties of light sources used in display technologies, how does the coherence length of a laser compare to that of a thermal light source?",opts:["A laser has a much shorter coherence length (a few microns) compared to a thermal source.","A laser has a much longer coherence length (often meters) compared to the highly random emission of a thermal source.","Both lasers and thermal sources have similar, very short coherence lengths, making them both completely incoherent.","The coherence length of a thermal source is typically measured in meters, while a laser's is measured in nanometers."],correct:1,exp:null},
+{id:"w1q3",a:1,name:"Assignment 1",q:"How does high ambient illumination (such as direct sunlight) typically affect the contrast ratio of a standard transmissive Flat Panel Display?",opts:["It increases the contrast ratio by boosting the luminance of the brightest state.","It has no effect on the contrast ratio because the internal backlight intensity remains constant.","It significantly decreases the ambient contrast ratio due to surface reflections adding luminance to both the \"on\" and \"off\" states, washing out the image.","It improves the contrast ratio by dynamically reducing the luminance of the black state."],correct:2,exp:null},
+{id:"w1q4",a:1,name:"Assignment 1",q:"What is a fundamental material difference in the thin films used for Organic Light Emitting Diodes (OLEDs) compared to traditional inorganic LEDs?",opts:["OLEDs utilize crystalline semiconductors, whereas traditional LEDs use amorphous organic materials.","OLEDs require a rigid crystalline substrate for fabrication, making them unsuitable for flexible displays.","OLEDs use amorphous organic thin films, which generally have lower carrier mobility than the crystalline semiconductors used in traditional LEDs.","Traditional LEDs can be easily fabricated on large glass or flexible substrates using spin-coating, unlike OLEDs."],correct:2,exp:null},
+{id:"w1q5",a:1,name:"Assignment 1",q:"Which of the following accurately describes the operating principle distinguishing resistive touch panels from capacitive touch panels?",opts:["Resistive touch panels require a conductive object like a bare finger to operate, while capacitive panels can be operated with any non-conductive object.","Capacitive touch panels suffer from lower optical transmittance due to an internal air gap, unlike resistive panels.","Resistive touch panels rely on mechanical pressure to deform a substrate and make electrical contact between two conductive layers, whereas capacitive panels detect changes in electrostatic capacitance caused by a conductive object.","Capacitive touch panels are generally only capable of single-touch operations, while resistive panels are the industry standard for multi-touch."],correct:2,exp:null},
+{id:"w1q6",a:1,name:"Assignment 1",q:"In Quantum-Dot displays (QD-LCDs or QD-OLEDs), what primary factor determines the specific emission wavelength (color) of the quantum dots when they are energized?",opts:["The intensity of the electrical current or backlight applied to the dots.","The physical size (diameter) of the semiconductor nanocrystals.","The type of organic polymer used to encapsulate the thin film layer.","The polarization angle of the incident light passing through the liquid crystal layer."],correct:1,exp:null},
+{id:"w1q7",a:1,name:"Assignment 1",q:"In the context of Augmented Reality (AR) Head-Mounted Displays, what is the core operational difference between Video See-Through (VST) and Optical See-Through (OST) architectures?",opts:["VST displays block direct real-world vision and use cameras to capture and blend the environment on a screen, whereas OST displays use optical combiners (like beam splitters or waveguides) to overlay digital images onto the user's direct, unobstructed view of the real world.","OST displays rely entirely on computer-generated virtual environments without showing the real world, whereas VST displays only show live camera feeds without digital overlays.","VST displays maintain zero-latency, natural resolution of the real world, whereas OST resolution is strictly limited by external camera sensors.","OST displays are generally more intrusive and suffer from severe camera lag during fast head movements compared to VST displays."],correct:0,exp:null},
+{id:"w1q8",a:1,name:"Assignment 1",q:"In a standard transmissive Liquid Crystal Display (LCD), what role do the liquid crystal molecules play in image formation?",opts:["They emit specific colors of light directly when an electrical voltage is applied across them.","They act as fixed color filters, absorbing unwanted wavelengths to produce RGB pixels.","They act as voltage-controlled light valves, reorienting under an electric field to alter the polarization state (phase retardation) of light passing from the backlight through crossed polarizers.","They act as a reflective backplane that bounces ambient light back toward the viewer without requiring a backlight."],correct:2,exp:null},
+{id:"w2q1",a:2,name:"Assignment 2",q:"Which of the following methods is commonly used to reduce motion blur in moving picture displays by decreasing the emission time per frame?",opts:["Increasing the peak luminance without changing the frame rate.","Inserting black frames between display frames.","Changing the display from a set-and-hold voltage function to a continuous emission function.","Utilizing blue and violet light to stimulate faster cone cell responses."],correct:1,exp:null},
+{id:"w2q2",a:2,name:"Assignment 2",q:"Under low illumination (scotopic vision), which photoreceptor cells dominate, and what is their primary limitation regarding color perception?",opts:["Cone cells dominate, but they cannot distinguish shapes clearly.","Rod cells dominate, and they are incapable of distinguishing colors.","Cone cells dominate, providing high-resolution color vision.","Rod cells dominate, providing highly saturated color vision but poor motion tracking."],correct:1,exp:null},
+{id:"w2q3",a:2,name:"Assignment 2",q:"In a standard visual acuity test using a \"C\" or \"E\" pattern at a viewing distance of 6 meters, a normal vision observer (6/6 or 20/20) can resolve a gap that corresponds to what visual angle?",opts:["1 degree","5 minutes (5/60 degree)","1 minute (1/60 degree)","10 minutes (10/60 degree)"],correct:2,exp:null},
+{id:"w2q4",a:2,name:"Assignment 2",q:"What was the primary mathematical motivation for developing the CIE 1931 (X, Y, Z) color system from the original CIE 1931 (R, G, B) system?",opts:["To directly account for the surrounding visual field effects on color appearance.","To ensure all visible colors could be represented by positive coordinate values, avoiding the negative values required in the RGB system.","To align the system with the physical size of semiconductor nanocrystals in modern displays.","To accurately measure the Color Rendering Index (CRI) of non-emissive displays."],correct:1,exp:null},
+{id:"w2q5",a:2,name:"Assignment 2",q:"In the CIE 1931 (X, Y, Z) color system, which specific parameter is intentionally set equal to the luminance of the color stimulus?",opts:["X","Y","Z","The sum of X, Y, and Z"],correct:1,exp:null},
+{id:"w2q6",a:2,name:"Assignment 2",q:"Why is the L-value in the CIE 1976 uniform color system considered more visually uniform for representing intensity differences than the Y-value from the CIE 1931 system?",opts:["The human eye has a non-linear response, meaning it is much more sensitive to small luminance differences in dim light than in bright light.","The Y-value cannot be mathematically applied to emissive displays, requiring the L-value for accurate measurement.","The L-value automatically accounts for the speckle effect caused by coherent light sources.","The human eye's response is perfectly linear, and the L-value corrects the logarithmic scaling flaws of the original Y-value."],correct:0,exp:null},
+{id:"w2q7",a:2,name:"Assignment 2",q:"How does an increase in \"air mass\" (the path length of sunlight passing through the atmosphere) affect the Correlated Color Temperature (CCT) of sunlight observed from Earth?",opts:["It increases the CCT, causing the light to appear bluer because long wavelengths are absorbed.","It decreases the CCT, causing the light to appear redder because short wavelengths are absorbed more heavily than long ones.","It has no effect on the CCT, as sunlight acts as a perfect, unaltered blackbody radiator regardless of atmosphere.","It increases the CCT by boosting the overall radiant power of the sunlight reaching the surface."],correct:1,exp:null},
+{id:"w2q8",a:2,name:"Assignment 2",q:"While laser light sources provide high efficiency and a broad color gamut for projection displays, what specific image quality challenge is caused by their coherent light emission?",opts:["Permanent burn-in or residual ghost images.","The speckle effect.","Binocular visual fatigue.","Gray level inversion at extreme viewing angles."],correct:1,exp:null},
+{id:"w3q1",a:3,name:"Assignment 3",q:"Which type of order is present in the nematic phase?",opts:["Orientational order only","Positional order only","Both complete positional and orientational order","Neither positional nor orientational order"],correct:0,exp:null},
+{id:"w3q2",a:3,name:"Assignment 3",q:"Which statement correctly distinguishes the smectic-C phase from the smectic-A phase?",opts:["Smectic-C has no molecular layers","Smectic-C has no orientational order","The director in smectic-C is tilted relative to the layer normal","The director in smectic-C is perpendicular to the layers"],correct:2,exp:null},
+{id:"w3q3",a:3,name:"Assignment 3",q:"In an ideal Smectic-A liquid crystal, twist and bend deformations are prohibited mainly because:",opts:["The molecules have no orientational order","The director must remain normal to the layers while the layer spacing is maintained","The splay elastic constant is zero","The material forms a complete three-dimensional crystal"],correct:1,exp:null},
+{id:"w3q4",a:3,name:"Assignment 3",q:"In homeotropic anchoring, the liquid-crystal director is preferably aligned:",opts:["Parallel to the substrate surface","Randomly within the substrate plane","Perpendicular to the substrate surface","At 45 degrees to the substrate surface"],correct:2,exp:null},
+{id:"w3q5",a:3,name:"Assignment 3",q:"The dielectric anisotropy of a nematic liquid crystal is defined as:",opts:["Δε = ε∥ − ε⊥","Δε = ε∥ + ε⊥","Δε = ε∥ / ε⊥","Δε = ε⊥ − ε∥"],correct:0,exp:null},
+{id:"w3q6",a:3,name:"Assignment 3",q:"Why can a liquid-crystal director escape into the third dimension near a disclination core?",opts:["To increase the anchoring energy","To increase the director gradient","To remove the singularity and reduce the elastic energy","To convert the nematic phase into a crystalline phase"],correct:2,exp:null},
+{id:"w3q7",a:3,name:"Assignment 3",q:"At an interface between two media without free surface charge or surface current, which field components remain continuous?",opts:["Normal components of E and H only","Tangential components of D and B only","All normal and tangential components of every electromagnetic field","Normal components D_n and B_n, and tangential components E_t and H_t"],correct:3,exp:null},
+{id:"w3q8",a:3,name:"Assignment 3",q:"In an anisotropic optical medium, which statement is correct?",opts:["Both E and D are always parallel to the wavevector k","D is perpendicular to k, but E need not be perpendicular to k","E is perpendicular to D for every propagation direction","The electric and magnetic fields are parallel"],correct:1,exp:null},
+{id:"w4q1",a:4,name:"Assignment 4",q:"For a liquid crystal with positive dielectric anisotropy (Δε > 0), the molecules tend to:",opts:["Align parallel to the applied electric field","Rotate randomly regardless of the field","Align perpendicular to the applied electric field","Remain unchanged in orientation"],correct:0,exp:null},
+{id:"w4q2",a:4,name:"Assignment 4",q:"The flexoelectric effect in nematic liquid crystals refers to:",opts:["Light-induced polarization","Magnetic field-induced polarization","Temperature-induced polarization","Deformation-induced polarization"],correct:3,exp:null},
+{id:"w4q3",a:4,name:"Assignment 4",q:"In a cholesteric liquid crystal, applying an electric field across the cell causes:",opts:["Liquid crystal to become isotropic immediately","In-plane director component to tilt due to flexoelectric polarization","Helical pitch to become zero","Helical axis to rotate perpendicular to the substrate"],correct:1,exp:null},
+{id:"w4q4",a:4,name:"Assignment 4",q:"Which liquid crystal phase exhibits spontaneous polarization due to molecular chirality?",opts:["Smectic-C*","Smectic-A","Nematic","Smectic-C"],correct:0,exp:null},
+{id:"w4q5",a:4,name:"Assignment 4",q:"The Surface-Stabilized Ferroelectric Liquid Crystal (SSFLC) device suppresses the helical structure by:",opts:["Heating the liquid crystal above the isotropic temperature","Using a cell gap smaller than the helical pitch with parallel anchoring layers","Applying a strong magnetic field","Increasing the cell gap beyond the helical pitch"],correct:1,exp:null},
+{id:"w4q6",a:4,name:"Assignment 4",q:"The crossover temperature (T_o) is defined as the temperature at which:",opts:["The birefringence reaches its maximum value","The liquid crystal changes from nematic to isotropic phase","The extraordinary refractive index becomes zero","The temperature gradient of the ordinary refractive index changes sign"],correct:3,exp:null},
+{id:"w4q7",a:4,name:"Assignment 4",q:"For most nematic liquid crystals, the correct ordering of the Frank elastic constants is:",opts:["K22 > K11 > K33","K11 > K33 > K22","K22 > K33 > K11","K33 > K11 > K22"],correct:3,exp:null},
+{id:"w4q8",a:4,name:"Assignment 4",q:"A Dual-Frequency Liquid Crystal (DFLC) improves switching performance because:",opts:["It operates only under DC voltage.","It eliminates the need for elastic restoring forces.","Its dielectric anisotropy changes sign with frequency, enabling active turn-off.","It increases birefringence at all frequencies."],correct:2,exp:null},
+{id:"w5q1",a:5,name:"Assignment 5",q:"For a 90-degree Twisted Nematic (TN) cell at lambda = 550 nm, what is the cell parameter dΔn at the first Gooch-Tarry minimum (the standard design point for TFT-LCDs)?",opts:["275 nm","330 nm","480 nm","550 nm"],correct:2,exp:"The Gooch-Tarry condition gives dΔn/λ = sqrt(m^2 − 1/4); for m = 1, sqrt(3)/2 = 0.866, so dΔn = 0.866 × 550 ≈ 480 nm — the fastest, standard operating point for notebook TN panels."},
+{id:"w5q2",a:5,name:"Assignment 5",q:"What is the fundamental physical root cause of the TN cell's narrow, asymmetric viewing angle and gray-scale inversion?",opts:["Excessive birefringence dispersion across RGB","The applied field is longitudinal (vertical) giving different phase retardation at oblique angles","The cell gap is too large for the driving voltage","Backflow effects during switching"],correct:1,exp:"Because the field runs vertically between the substrates, the directors tilt out-of-plane rather than staying in-plane; this out-of-plane tilt makes the effective retardation angle-dependent, producing the classic narrow/asymmetric TN viewing cone and gray-scale inversion."},
+{id:"w5q3",a:5,name:"Assignment 5",q:"What structural change defines In-Plane Switching (IPS) mode and lets it fix TN's viewing-angle problem?",opts:["A thinner cell gap combined with a stronger backlight","Both electrodes are placed on the same (bottom) substrate","A homeotropic (vertical) alignment layer replacing the homogeneous one","A quarter-wave film added between the polarizer and the cell"],correct:1,exp:"With both electrodes on one substrate, the fringing field is predominantly lateral, so LC directors twist within the substrate plane; oblique light then sees nearly the same optical path from any azimuthal direction, widening the viewing angle."},
+{id:"w5q4",a:5,name:"Assignment 5",q:"According to the Erickson-Leslie decay-time expression for IPS, τoff = γ1 d^2 / (π^2 K22), which statement is TRUE?",opts:["τoff depends strongly on the rubbing angle Φ","τoff depends only on the cell gap d and the visco-elastic ratio γ1/K22","τoff increases as the electric field E increases","τoff is unrelated to the twist elastic constant K22"],correct:1,exp:"Setting E = 0 removes voltage/angle dependence from the governing equation, leaving τ_off purely as a function of d^2 and the ratio γ1/K22 — this is why decay time is a fixed material/geometry property, simplifying cell design."},
+{id:"w5q5",a:5,name:"Assignment 5",q:"What is the primary purpose of the \"overdrive/undershoot\" voltage drive method used in LC-TVs?",opts:["To permanently lower the Fréedericksz threshold voltage of the LC mixture","To briefly apply a voltage above (overdrive) or below (undershoot) the final holding voltage","To physically reduce the LC cell gap during operation","To replace the TFT backplane with passive-matrix addressing"],correct:1,exp:"Rise time is strongly voltage-dependent (slow near Vth, fast well above it); briefly forcing a large V/Vth via a \"kick\" pulse drives the director toward the target orientation quickly, after which the voltage drops to the correct holding value — a drive-waveform trick, not a change in cell physics."},
+{id:"w5q6",a:5,name:"Assignment 5",q:"What is the key structural difference between Fujitsu's protrusion-type MVA and Samsung's PVA (Patterned Vertical Alignment)?",opts:["PVA uses physical protrusions while MVA uses electrode slits","MVA uses physical protrusions on the substrate, while PVA uses patterned slits in the electrode","They are functionally and structurally identical","PVA does not use multi-domain splitting at all"],correct:1,exp:"Both are four-domain VA implementations, but MVA relies on physical bumps (protrusions) to pre-tilt each domain, whereas PVA uses patterned electrode slits to generate the fringing field that sets domain direction — avoiding the protrusion's light scattering and thus improving contrast ratio."},
+{id:"w5q7",a:5,name:"Assignment 5",q:"In a direct-view reflective LCD (R-LCD), why is the LC cell gap roughly half that of an equivalent transmissive LCD using the same operating mode?",opts:["R-LCDs use an intrinsically different (higher-birefringence) LC material","Ambient light makes a round trip (double pass) through the LC layer via the rear reflector","R-LCDs operate at a much lower RMS voltage than transmissive panels","The bumpy reflector itself contributes half the required retardation"],correct:1,exp:"A transmissive cell only sees a single pass of backlight, while a reflective cell's ambient light passes through the LC layer, bounces off the rear reflector, and passes through again — double pass means double retardation for the same thickness, so the gap is halved to hit the same dΔn target."},
+{id:"w5q8",a:5,name:"Assignment 5",q:"For a film-compensated homogeneous reflective LCD operating under crossed-polarizer conditions, what minimum LC retardation dΔn is required (quarter-wave condition) at λ = 550 nm?",opts:["550 nm","275 nm","137.5 nm","68.75 nm"],correct:2,exp:"Under crossed polarizers, the LC layer must act as a quarter-wave plate, i.e., dΔn = λ/4. At λ = 550 nm, this gives dΔn = 550/4 = 137.5 nm."},
+{id:"w6q1",a:6,name:"Assignment 6",q:"What is the primary function of a transflector in a transflective LCD?",opts:["To completely reflect both ambient light and backlight","To completely absorb ambient light","To partially reflect ambient light and partially transmit backlight","To convert unpolarized light into monochromatic light"],correct:2,exp:"Correct Answer: C. To partially reflect ambient light and partially transmit backlight."},
+{id:"w6q2",a:6,name:"Assignment 6",q:"What is the fundamental difference between amplitude-splitting and orthogonal-polarization transflectors?",opts:["Orthogonal-polarization devices absorb approximately half of the incident light","Both use the same optical mechanism but different materials","Amplitude-splitting devices operate only with circularly polarized light","Amplitude-splitting devices partially reflect and transmit incident light, whereas polarization-splitting devices route light according to its polarization state"],correct:3,exp:"Correct Answer: D. Amplitude-splitting devices partially reflect and transmit incident light, whereas polarization-splitting devices route light according to its polarization state."},
+{id:"w6q3",a:6,name:"Assignment 6",q:"Why does a cholesteric absorption-type transflective LCD reduce the parallax problem compared with the nematic absorption-type design?",opts:["It requires two additional polarizers","It increases the thickness of the glass substrate","It eliminates the LC layer completely","It allows the transflector to be placed inside the LC cell"],correct:3,exp:"Correct Answer: D. It allows the transflector to be placed inside the LC cell."},
+{id:"w6q4",a:6,name:"Assignment 6",q:"In a dual-cell-gap transflective LCD, what is the approximate relationship between the reflective-region cell gap dR and the transmissive-region cell gap dT?",opts:["dR ≈ (1/2) dT","dR ≈ (1/4) dT","dR ≈ 2 dT","dR ≈ dT"],correct:0,exp:"Correct Answer: A. dR ≈ (1/2) dT — the reflective-region gap is about half the transmissive-region gap, since reflected light double-passes the LC layer."},
+{id:"w6q5",a:6,name:"Assignment 6",q:"Why is the colour-filter layer made thinner in the reflective region of a multi-thickness colour-filter transflective LCD?",opts:["To increase the driving voltage of the reflective region","Reflected light passes through the colour filter twice, whereas transmitted light passes through it once","The reflective region does not require colour filtering","Reflected light has a shorter wavelength than transmitted light"],correct:1,exp:"Correct Answer: B. Reflected light passes through the colour filter twice, whereas transmitted light passes through it once."},
+{id:"w6q6",a:6,name:"Assignment 6",q:"What is meant by crosstalk in a passive-matrix LCD?",opts:["Unwanted voltage appearing across non-addressed pixels","Mechanical interaction between neighbouring LC molecules","Simultaneous addressing of all rows in the display","Complete loss of voltage across the selected pixel"],correct:0,exp:"Correct Answer: A. Unwanted voltage appearing across non-addressed pixels."},
+{id:"w6q7",a:6,name:"Assignment 6",q:"The steepness of the voltage-transmittance characteristic of an LCD is described by the parameter γ. Which expression is correct?",opts:["γ = V90 − V10","γ = V90 + V10","γ = V10 / V90","γ = V90 / V10"],correct:3,exp:"Correct Answer: D. γ = V90 / V10 — this matches the standard Alt-Pleshko multiplexing convention, where γ ≥ 1."},
+{id:"w6q8",a:6,name:"Assignment 6",q:"Why are AC rather than sustained DC waveforms normally used for driving liquid-crystal displays?",opts:["DC cannot reorient liquid-crystal molecules","AC increases the number of rows that can be addressed","AC completely eliminates crosstalk between pixels","AC avoids ion-injection degradation while still providing the required RMS switching response"],correct:3,exp:"Correct Answer: D. AC avoids ion-injection degradation while still providing the required RMS switching response."},
+{id:"w7q1",a:7,name:"Assignment 7",q:"Which feature most fundamentally distinguishes an active-matrix TFT-LCD from a passive-matrix LCD?",opts:["Every pixel uses a separate backlight source","Each pixel has its own TFT switch to set and electrically isolate its voltage","The liquid-crystal layer emits light when the gate voltage is applied","Row and column electrodes are eliminated completely"],correct:1,exp:"Correct Answer: B. Each pixel has its own TFT switch to set and electrically isolate its voltage."},
+{id:"w7q2",a:7,name:"Assignment 7",q:"What is the primary role of the storage capacitor (Cs) in a TFT-LCD pixel?",opts:["To shield the TFT from ambient light","To increase the optical transmittance of the color filter","To hold the pixel voltage after the TFT is switched off","To generate the gate-selection voltage for the next row"],correct:2,exp:"Correct Answer: C. To hold the pixel voltage after the TFT is switched off."},
+{id:"w7q3",a:7,name:"Assignment 7",q:"Which statement correctly describes switching in a surface-stabilized ferroelectric liquid-crystal (SSFLC) display?",opts:["The final state is determined only by the RMS value of the applied voltage","A continuous holding voltage is required to preserve either state","Switching occurs only when the helical pitch becomes infinite","The two states are selected by opposite voltage-pulse polarities and remain stable after the pulse is removed"],correct:3,exp:"Correct Answer: D. The two states are selected by opposite voltage-pulse polarities and remain stable after the pulse is removed."},
+{id:"w7q4",a:7,name:"Assignment 7",q:"In an SSFLC passive-matrix drive scheme, which condition is essential to prevent crosstalk in non-addressed pixels?",opts:["Their accumulated voltage-time area must remain within the non-switching range ±Ath","Their voltage-time area must always exceed the switching area As","Their row voltage must equal the selected-pixel voltage throughout the frame","Their voltage polarity must remain positive throughout addressing"],correct:0,exp:"Correct Answer: A. Their accumulated voltage-time area must remain within the non-switching range ±Ath."},
+{id:"w7q5",a:7,name:"Assignment 7",q:"In a 0/360 twisted-untwisted bistable nematic (BTN) cell, which condition promotes switching into the 360 state through the backflow mechanism?",opts:["A low field followed by gradual voltage removal","A constant sub-threshold DC field maintained for a long duration","A sufficiently high field followed by sudden removal, with intrinsic chirality present","Removal of the chiral dopant followed by slow field reduction"],correct:2,exp:"Correct Answer: C. A sufficiently high field followed by sudden removal, with intrinsic chirality present."},
+{id:"w7q6",a:7,name:"Assignment 7",q:"Why can a bistable cholesteric reflective display produce gray scale even though each individual domain is only bistable?",opts:["Each domain continuously changes its refractive index with applied voltage","Different domains have slightly different switching thresholds, so the fraction of planar and focal-conic domains can be controlled","The homeotropic state provides continuously variable absorption","Gray scale is generated exclusively by varying the color-filter thickness"],correct:1,exp:"Correct Answer: B. Different domains have slightly different switching thresholds, so the fraction of planar and focal-conic domains can be controlled."},
+{id:"w7q7",a:7,name:"Assignment 7",q:"Why is the reflectance of a single planar cholesteric layer limited to about 50% for unpolarized incident light?",opts:["Half of the incident light is necessarily absorbed by the LC molecules","The focal-conic texture occupies half of the cell at zero field","Bragg reflection occurs only over half of the physical cell thickness","The layer reflects only the circular polarization matching its helical handedness and transmits the opposite handedness"],correct:3,exp:"Correct Answer: D. The layer reflects only the circular polarization matching its helical handedness and transmits the opposite handedness."},
+{id:"w7q8",a:7,name:"Assignment 7",q:"What is the principal reason the dynamic drive scheme addresses a bistable cholesteric matrix faster than the conventional drive scheme?",opts:["It pipelines the long preparation and evolution phases across rows, while only the short selection phase is performed sequentially","It eliminates the preparation and evolution phases completely","It converts the passive matrix into a TFT active matrix during addressing","It keeps all rows continuously in the homeotropic state during the entire frame"],correct:0,exp:"Correct Answer: A. It pipelines the long preparation and evolution phases across rows, while only the short selection phase is performed sequentially."},
+{id:"w8q1",a:8,name:"Assignment 8",q:"In the field-off state of a scattering-mode PDLC, why does the cell appear milky/opaque?",opts:["LC droplets absorb light","Random droplet orientation causes index mismatch","Droplets are oversized","Polymer itself is opaque"],correct:1,exp:"Randomly oriented droplet directors each present a different effective refractive index, so virtually none match the polymer's index — light scatters at every droplet boundary throughout the cell."},
+{id:"w8q2",a:8,name:"Assignment 8",q:"Which elastic deformation dominates in a radial PDLC droplet?",opts:["Splay only","Twist only","Bend only","Splay + bend"],correct:0,exp:"The director in a radial droplet points purely outward from a single central point defect, a configuration that involves splay deformation exclusively."},
+{id:"w8q3",a:8,name:"Assignment 8",q:"What condition lets a light-guide plate trap and transport light via total internal reflection?",opts:["Incidence angle exceeds critical angle θc","Refractive index of air exceeds that of the plate","Light hits a phosphor coating","Incidence angle equals 0°"],correct:0,exp:"θc = arcsin(n_air/n_plate); any ray striking the plate's flat surface at an angle beyond θc is totally internally reflected and stays guided inside the plate."},
+{id:"w8q4",a:8,name:"Assignment 8",q:"Why does a wire-grid polarizer reflect light polarized parallel to its metal wires?",opts:["The effective index for that polarization is real","The effective index for that polarization is complex","The wires absorb only that polarization","That polarization has zero wavelength"],correct:1,exp:"Averaging the metal-dominated dielectric response over one grating period yields a complex effective index n∥ — the standard electromagnetic signature of a reflective response."},
+{id:"w8q5",a:8,name:"Assignment 8",q:"What is the key efficiency advantage of a reflective polarizer over an absorbing polarizer?",opts:["Lower manufacturing cost","Unwanted light is recycled, not absorbed","It eliminates the need for a backlight","It only works for blue light"],correct:1,exp:"A reflective polarizer sends the unwanted polarization back into the backlight stack, where its polarization can be rotated (via a mirror + half-wave plate or scattering medium) and reused, rather than converted to heat."},
+{id:"w8q6",a:8,name:"Assignment 8",q:"What refractive-index-ellipsoid shape must a compensation film have to counter a calamitic LC layer?",opts:["Prolate","Oblate","Spherical","Isotropic"],correct:1,exp:"Calamitic (rod-like) LC molecules have a prolate index ellipsoid, so a compensation film needs the opposite (oblate) shape to cancel the LC's angle-dependent retardation."},
+{id:"w8q7",a:8,name:"Assignment 8",q:"Why are color-filter pigment particles ground down to a 50-500 nm size range?",opts:["To boost absorption strength","Avoid light-scattering that lowers contrast","To match the LED emission peak","To reduce raw-material cost"],correct:1,exp:"Particles must stay well below the wavelength of visible light; larger particles would scatter and depolarize the transmitted light, directly degrading the display's achievable contrast ratio."},
+{id:"w8q8",a:8,name:"Assignment 8",q:"Which depth cue is delivered by every stereoscopic display technology (HMD, anaglyph, shutter glasses, polarizing glasses)?",opts:["Accommodation","Convergence","Binocular disparity","Motion parallax"],correct:2,exp:"Every stereoscopic method's core mechanism — presenting each eye a distinct image — is precisely what produces binocular disparity; the other three cues generally aren't naturally reproduced."},
+{id:"w9q1",a:9,name:"Assignment 9",q:"A conventional fixed parallax-barrier autostereoscopic display halves the horizontal resolution, because alternate columns of the panel are assigned to each eye. How does a time-division parallax barrier recover the full native resolution?",opts:["It uses a higher-resolution panel with twice as many columns behind the same barrier","Over two alternating frames the left/right column assignment is swapped while the LC barrier switches between its two complementary states, so visual persistence lets each eye integrate content from both odd and even columns","It removes the barrier entirely in 3D mode and relies on the viewer wearing polarised glasses","It replaces the absorptive barrier with a lenticular lens array, which does not block any light"],correct:1,exp:"Accepted answer: Over two alternating frames the left/right column assignment is swapped while the LC barrier switches between its two complementary states, so visual persistence lets each eye integrate content from both odd and even columns."},
+{id:"w9q2",a:9,name:"Assignment 9",q:"In a full-array local dimming (FALD) mini-LED backlight, what happens to the effective contrast ratio as the number of independently controlled dimming zones is increased, and why is the zone count not simply made as large as possible?",opts:["Contrast improves linearly without limit; the zone count is restricted only by the response time of the liquid crystal","Contrast is independent of zone count; only the peak brightness of the LEDs matters","Contrast improves steeply at first and then saturates, while every additional zone costs drive current, wiring, a driver channel and thermal margin","Contrast degrades as zones are added, because each smaller zone emits proportionally less light"],correct:2,exp:"Accepted answer: Contrast improves steeply at first and then saturates, while every additional zone costs drive current, wiring, a driver channel and thermal margin."},
+{id:"w9q3",a:9,name:"Assignment 9",q:"A mini-LED backlight containing several thousand independently controlled dimming zones is to be driven. Why is active-matrix driving preferred over passive-matrix driving at this zone count?",opts:["Passive-matrix scanning gives each row a duty cycle of only about 1/N, so the peak current must be raised to hold the same average brightness; an active-matrix TFT and storage capacitor instead hold each zone continuously","Passive-matrix driving cannot use pulse-width modulation, so zone brightness cannot be varied at all","Active-matrix driving allows the LEDs to be operated in reverse bias, which lowers the power consumption","Passive matrix requires one dedicated driver channel per zone, whereas active matrix requires none"],correct:0,exp:"Accepted answer: Passive-matrix scanning gives each row a duty cycle of only about 1/N, so the peak current must be raised to hold the same average brightness; an active-matrix TFT and storage capacitor instead hold each zone continuously."},
+{id:"w9q4",a:9,name:"Assignment 9",q:"Silicon is the most mature semiconductor in the industry, yet efficient LEDs are made from III-V compounds such as InGaN instead. What is the fundamental reason?",opts:["Silicon's 1.12 eV bandgap corresponds to an ultraviolet wavelength, which is invisible to the eye","Silicon cannot be doped p-type, so no p-n junction can be formed in it","Silicon's refractive index is too low for any generated light to be trapped inside the chip","Silicon is an indirect-bandgap material, so radiative recombination additionally requires a phonon to conserve momentum and is therefore very improbable; direct-gap III-V compounds recombine radiatively with high probability"],correct:3,exp:"Accepted answer: Silicon is an indirect-bandgap material, so radiative recombination additionally requires a phonon to conserve momentum and is therefore very improbable; direct-gap III-V compounds recombine radiatively with high probability."},
+{id:"w9q5",a:9,name:"Assignment 9",q:"Why does a multi-quantum-well (MQW) active region give a far higher radiative recombination rate than a simple p-n homojunction made from the same material?",opts:["The wells lower the bandgap of the material, so lower-energy photons are emitted more easily","In a homojunction the injected carriers spread over a diffusion length, giving a low carrier density and hence a weak quadratic radiative term; band offsets confine both electrons and holes inside a layer only a few nanometres thick, raising the local carrier density enormously","The wells act as mirrors that reflect emitted photons back into the active region for reabsorption","Quantum wells eliminate Auger recombination completely, so all recombination becomes radiative"],correct:1,exp:"Accepted answer: In a homojunction the injected carriers spread over a diffusion length, giving a low carrier density and hence a weak quadratic radiative term; band offsets confine both electrons and holes inside a layer only a few nanometres thick, raising the local carrier density enormously."},
+{id:"w9q6",a:9,name:"Assignment 9",q:"GaN has a refractive index of about 2.5 and air about 1.0. Using the critical-angle relation sin θc = n_air / n_GaN, the critical angle at a flat GaN-air interface is closest to:",opts:["12°","24°","42°","66°"],correct:1,exp:"Accepted answer is 24°."},
+{id:"w9q7",a:9,name:"Assignment 9",q:"Efficiency droop in InGaN LEDs is described in the lecture as intrinsic. Which observation establishes this, and what design strategy does it justify for mini-LED backlights?",opts:["Droop persists under pulsed operation with self-heating minimised, showing that it is not merely a thermal effect; the strategy is to spread the required luminance over many chips, each driven at moderate current near the EQE peak of roughly 1-10 A/cm^2","Droop disappears when the LED is pulsed, showing that it is purely thermal; the strategy is therefore to improve the heat sink","Droop occurs only in AlGaInP red LEDs; the strategy is to avoid red chips in backlights altogether","Droop is caused by the escape-cone limit; the strategy is to roughen the chip surface"],correct:0,exp:"Accepted answer: Droop persists under pulsed operation with self-heating minimised, showing that it is not merely a thermal effect; the strategy is to spread the required luminance over many chips, each driven at moderate current near the EQE peak of roughly 1-10 A/cm^2."},
+{id:"w9q8",a:9,name:"Assignment 9",q:"A mini-LED backlight panel requires N = 20 000 chips to be transferred, and the per-die transfer yield is 99.99%. Using Y_panel = y^N, the probability that a finished panel contains no defective die is closest to:",opts:["99.99%","87%","14%","0%"],correct:2,exp:"Accepted answer is 14%."},
+{id:"w10q1",a:10,name:"Assignment 10",q:"In an N-row passive-matrix micro-LED display, each row is addressed sequentially for an equal fraction of the frame time. What is the duty cycle of any single row within one frame?",opts:["1","1/N","1/N^2","N"],correct:1,exp:"In a passive-matrix (PM) addressing scheme, only one row is forward-biased and emitting at any instant; the array is scanned row-by-row across all N rows within a single frame period. Each row is therefore \"on\" for exactly 1/N of the total frame time — this fraction is, by definition, the duty cycle. Consequently, to deliver a target average luminance, the instantaneous (peak) current during the brief \"on\" interval must be scaled up by a factor of N relative to what continuous (100% duty-cycle) operation would require: J_peak = N × J_avg. This N-fold scaling penalty is precisely what motivates active-matrix driving. Reference: Lecture 46, Slide 20."},
+{id:"w10q2",a:10,name:"Assignment 10",q:"In the fabrication flow described in Lecture 46, which pair of metal contacts is used to form low-resistance ohmic contacts to n-GaN and p-GaN respectively?",opts:["Ti/Al for n-GaN; Ni/Au for p-GaN","Ni/Au for n-GaN; Ti/Al for p-GaN","Ti/Au for n-GaN; Ni/Al for p-GaN","Al/Ti for n-GaN; Au/Ni for p-GaN"],correct:0,exp:"The n-type ohmic contact uses a Ti/Al bilayer (30 nm/150 nm) deposited by e-beam evaporation: Ti reacts with GaN to form TiN, which lowers the Schottky barrier via nitrogen-vacancy doping near the interface, giving a specific contact resistance below 1×10^-5 Ω·cm^2 after annealing. The p-type ohmic contact uses a Ni/Au bilayer (10 nm/10 nm) annealed at 500°C in air: partial oxidation of Ni forms NiO, a p-type oxide that lowers the hole-injection barrier, and after annealing the film becomes semi-transparent (~70% at 450 nm) — important for top-emitting devices. The other pairings in options B-D do not match the metallurgy described in the lecture. Reference: Lecture 46, Slide 13."},
+{id:"w10q3",a:10,name:"Assignment 10",q:"Which of the following best explains why active-matrix (AM) driving is essential for high-resolution, battery-powered micro-LED microdisplays?",opts:["AM driving increases the number of pixels per unit area","Under AM driving, every pixel is paired with a dedicated CMOS driver transistor (a sample-and-hold current source) that continuously supplies the programmed current throughout the entire frame, giving 100% duty cycle","AM driving reduces the required backlight brightness","AM driving enables higher refresh rates only"],correct:1,exp:"Under AM driving, every pixel is paired with a dedicated CMOS driver transistor (a sample-and-hold current source) that continuously supplies the programmed current throughout the entire frame. This gives a duty cycle of 100%, so peak current density equals average current density — unlike passive-matrix driving, where the peak current must be N times the average. Operating continuously at a low, steady current keeps the micro-LED below the Auger-recombination-driven efficiency-droop threshold and avoids Joule heating in the interconnect lines, which is essential for high-resolution, low-power, battery-operated microdisplays such as AR/VR headsets. Options A, C and D describe effects unrelated to the duty-cycle argument made in the lecture. Reference: Lecture 47-48."},
+{id:"w10q4",a:10,name:"Assignment 10",q:"Why can micro-LED array chips not be grown or fabricated directly on top of finished silicon CMOS driver circuitry, making a separate flip-chip bonding step necessary?",opts:["III-nitride micro-LEDs require MOCVD epitaxial growth at ~1050°C in a reactive environment; finished Si CMOS cannot survive these conditions and GaN lattice is incompatible with silicon","Because silicon substrates are too expensive for large panels","Because micro-LEDs require transparent substrates","Because flip-chip bonding improves thermal dissipation"],correct:0,exp:"III-nitride micro-LEDs require MOCVD epitaxial growth at temperatures around 1050°C in a reactive chemical environment; finished Si CMOS transistors (with their metal interconnects and doped junctions) cannot survive these conditions, and the crystal lattice of GaN is in any case incompatible with silicon. The lecture therefore adopts a hybrid focal-plane-array approach: the μLED array is fabricated separately on sapphire and the CMOS IC separately on silicon, and the two are joined afterwards by flip-chip bonding through indium bumps — the same strategy long used for infrared focal-plane-array detectors. Options B-D are not the reasons given in the lecture. Reference: Lecture 47-48, Slide 6."},
+{id:"w10q5",a:10,name:"Assignment 10",q:"The angular emission intensity of a micro-LED pixel, measured through the transparent sapphire substrate, shows a full width at half maximum (FWHM) greater than 120° and closely follows which distribution?",opts:["Batwing pattern","Lambertian distribution, I(θ) = I0 cos θ","Narrow Gaussian beam","Lorentzian distribution"],correct:1,exp:"A micro-LED pixel is a self-emissive, isotropically radiating semiconductor source viewed through a transparent sapphire substrate (n = 1.77) with no waveguide, polariser, or absorptive film in the optical path. With no structure to restrict or reshape the emission cone, the angular pattern follows the ideal planar-emitter (Lambertian) profile I ∝ cos θ, consistent with the measured FWHM exceeding 120° (essentially hemispherical emission). A batwing pattern (option A) instead shows an intensity dip at normal incidence, typical of certain phosphor-converted white LED packages with a shaped lens; a narrow Gaussian beam (option C) is characteristic of a collimated or laser source, not a bare LED die. Reference: Lecture 49, Slide 14."},
+{id:"w10q6",a:10,name:"Assignment 10",q:"A micro-LED pixel has a square light-emitting mesa of side 12 μm and is driven at a constant current of 1 μA. Using J = I/A, the resulting current density is closest to:",opts:["0.07 A/cm^2","0.7 A/cm^2","7 A/cm^2","22 A/cm^2"],correct:1,exp:"Convert the mesa side length to centimetres: 12 μm = 12×10^-4 cm = 1.2×10^-3 cm. The mesa area is A = (1.2×10^-3 cm)^2 = 1.44×10^-6 cm^2. The current density is then J = I/A = (1×10^-6 A)/(1.44×10^-6 cm^2) ≈ 0.7 A/cm^2. This matches the operating point quoted in the lecture, roughly 30× lower than the ≈22 A/cm^2 typical of a conventional 300 μm indicator LED driven at 20 mA — explaining why active-matrix micro-LED pixels sit comfortably below the Auger-droop current density. Reference: Lecture 49, Slide 4 and 7."},
+{id:"w10q7",a:10,name:"Assignment 10",q:"Which of the following is NOT one of the three main routes to a full-colour micro-LED microdisplay discussed in the lecture?",opts:["Side-by-side RGB sub-pixels (AlGaInP red + InGaN green/blue, laterally arranged)","A blue/UV micro-LED combined with colour-conversion phosphors or quantum dots","Vertically stacked RGB sub-pixels sharing a single optical aperture","A monolithic white-emitting micro-LED combined with RGB colour filters"],correct:3,exp:"The lecture identifies exactly three routes: (i) side-by-side RGB sub-pixels (AlGaInP red + InGaN green/blue, laterally arranged); (ii) a blue/UV micro-LED combined with colour-conversion phosphors or quantum dots; and (iii) vertically stacked RGB sub-pixels sharing a single optical aperture. A monolithic white-emitting micro-LED combined with RGB colour filters (option D) is not one of these, and would in any case be inefficient for a self-emissive micro-LED, since absorptive colour filters discard roughly two-thirds of the generated light rather than converting it. Reference: Lecture 50, Slide 4."},
+{id:"w10q8",a:10,name:"Assignment 10",q:"Sony's first-generation Crystal LED TV (2012) was fabricated as a single monolithic panel of 6.22 million micro-LED pixels, whereas Samsung's 'The Wall' (2017) uses a modular tiled architecture. What is the primary manufacturing advantage of the modular approach over the single-panel approach?",opts:["Lower power consumption","A defective module can be reworked or swapped without affecting the rest of the display, decoupling yield from total pixel count","Higher colour gamut","Simpler driver electronics"],correct:1,exp:"In Sony's single-panel architecture, all 6.22 million pixels are fabricated and assembled as one indivisible unit, so a single defective pixel discovered after assembly renders the whole panel unusable — the process must therefore approach 100% yield across millions of pixels, which is extremely costly. Samsung's 'The Wall' instead tiles many small, independently fabricated and pre-tested modules; a defective module can be reworked or swapped without affecting the rest of the display, decoupling the yield requirement from the total pixel count. This also removes any practical upper limit on display size and permits in-field repair, and has since become the industry-standard architecture for large-area micro-LED displays. Reference: Lecture 51, Slide 13 and 14."},
+{id:"w11q1",a:11,name:"Assignment 11",q:"Which company developed the horizontal planetary MOCVD reactor architecture used for micro-LED epitaxial growth, in which individual wafer 'satellites' spin passively on a rotating susceptor?",opts:["Veeco","Aixtron","Tokyo Electron","Lam Research"],correct:1,exp:"Two MOCVD reactor architectures dominate LED epitaxy: the vertical rotating disc reactor developed by Veeco, and the horizontal planetary reactor developed by Aixtron. In the Aixtron design, MO precursors and hydrides flow horizontally and radially outward from a central injector; each wafer sits on an individual 'satellite' disk, and all satellites are arranged on a large rotating 'susceptor'. A thin gas foil emerging from the susceptor beneath each satellite drives it to spin continuously without any mechanical motor, which averages out the radial reactant-depletion gradient and gives superior wavelength uniformity (Wd_std ≈ 0.77 nm on 6\" wafers) compared to the vertical reactor (≈ 0.82 nm on 4\" wafers), at the cost of higher consumable/machining cost. Reference: Lecture 52, Slide 11 and 15-17."},
+{id:"w11q2",a:11,name:"Assignment 11",q:"Why are lateral-type micro-LEDs (with both p- and n-electrodes on the same face) preferred over vertical-type devices for display integration?",opts:["Lateral devices have all contacts on one face, easing bonding onto PCBs/TFT backplanes/CMOS ICs and avoiding light shielding","Vertical devices have higher external quantum efficiency","Lateral devices require no epitaxial growth","Vertical devices cannot be flip-chip bonded"],correct:0,exp:"In a vertical-type micro-LED the p- and n-electrodes sit on opposite faces and current flows along the growth (z) direction, whereas in a lateral-type device both electrodes sit on the same face and current flows in-plane. The lateral geometry is far easier to bond onto PCBs, TFT backplanes, or CMOS driver ICs, since all electrical contacts are accessible from one side; and because the electrodes (and any obscuring metal) sit on the face opposite to the light-output face, there is no shielding effect on the emitted light. This is why lateral micro-LEDs dominate essentially all current commercial and developmental micro-LED display programmes. Reference: Lecture 53, Slide 16."},
+{id:"w11q3",a:11,name:"Assignment 11",q:"What is the key structural reason GaN nanowire (NW) micro-LEDs avoid the sidewall non-radiative recombination that limits conventional planar micro-LEDs?",opts:["Nanowire facets are grown, not etched, avoiding plasma damage; non-polar facets are free of QCSE","Nanowires use a different substrate material","Nanowires have a larger bandgap","Nanowires eliminate quantum wells"],correct:0,exp:"A conventional planar micro-LED's mesa boundary is defined by ICP dry etching, which leaves plasma-damaged sidewalls (dangling bonds, N vacancies) that act as non-radiative recombination centres, and this damage becomes proportionally worse as the mesa shrinks. In a GaN nanowire micro-LED, by contrast, each nanowire exposes six equivalent non-polar m-plane facets, and the InGaN quantum well plus a surrounding p-GaN shell are grown directly on these facets — the device boundary is set entirely by crystal growth, with no etch step and therefore no plasma damage. As a bonus, the non-polar facets are also free of the quantum-confined Stark effect (QCSE), permitting thicker, more efficient quantum wells. Reference: Lecture 54, Slide 13."},
+{id:"w11q4",a:11,name:"Assignment 11",q:"On the InGaN/GaN platelet template platform described in the lecture, approximately what indium content is used in the platelet to serve as a template for red-emitting micro-LEDs?",opts:["0%","9%","18%","27%"],correct:2,exp:"The platelet platform uses relaxed In_xGa_(1-x)N templates, with indium content chosen (via Vegard's-law strain arguments) so that a subsequently grown InGaN quantum well experiences roughly the same strain as a conventional blue QW on GaN. The lecture reports platelet indium contents spanning 0% (blue template), 9% (green template), and 18% (red template) — all realised on the same platelet growth-and-fabrication platform, offering a unified route to monolithic RGB. Reference: Lecture 55, Slide 4 and 14."},
+{id:"w11q5",a:11,name:"Assignment 11",q:"Which indirect micro-LED mass-transfer technique, pioneered by LuxVue (acquired by Apple in 2014), picks up and releases chips by applying and then reversing a voltage that creates and removes an electrostatic grasping force?",opts:["PDMS elastomer stamp printing","Electrostatic transfer head","Fluidic self-assembly","Direct wafer-to-wafer bonding"],correct:1,exp:"LuxVue's electrostatic transfer-head approach uses an array of transfer heads: applying a selective voltage to a head generates an electrostatic grasping force that picks up a micro-LED chip from the carrier substrate, and reversing the voltage releases it precisely at the target position on the backplane. This is distinct from X-Celeprint's elastomer (PDMS) stamp printing, which relies on differential adhesion; e-Lux's fluidic self-assembly, which relies on chips self-aligning into shaped wells from a liquid suspension; and direct wafer-to-wafer bonding, which uses no intermediary carrier at all. Reference: Lecture 55, Slide 19."},
+{id:"w11q6",a:11,name:"Assignment 11",q:"In a bare (unmodified) RGB micro-LED display, why do the green and blue subpixels show a Batwing far-field emission pattern while the red subpixel remains Lambertian?",opts:["AlGaInP (red) absorbs its own emitted light much more strongly than InGaN (green/blue), so red photons are mostly absorbed before reaching the sidewalls, while green/blue photons readily exit through sidewalls","Green and blue chips have larger physical size","Red chips use a different substrate","Green and blue chips operate at higher current density"],correct:0,exp:"For a 35×60 μm chip, the lecture's point-source sidewall-emission model gives calculated sidewall emission ratios of only ~5.6% for red (AlGaInP) but ~54.2% for green and ~56.7% for blue (both InGaN). This large difference arises because AlGaInP absorbs its own emitted light much more strongly than InGaN does, so red photons are mostly absorbed before they can reach and escape through the sidewalls, while green/blue photons readily reach and exit through the sidewalls. Since sidewall emission is angularly concentrated away from normal incidence, chips that emit strongly from their sidewalls (green, blue) show a Batwing pattern, while the red chip — which emits almost entirely from its top surface — remains Lambertian. Reference: Lecture 56, Slide 8 and 13."},
+{id:"w11q7",a:11,name:"Assignment 11",q:"Deploying a top black matrix over each micro-LED chip to eliminate sidewall emission and fix angular colour shift comes at what direct cost?",opts:["Reduced viewing angle","Optical efficiency cut by roughly 2x because sidewall emission accounted for ~54-57% of green/blue output","Increased fabrication cost only","Lower colour gamut"],correct:1,exp:"The black matrix absorbs all light escaping from a chip's sidewalls, leaving only the Lambertian top-surface emission to pass through the opening above the chip. Because sidewall emission accounted for roughly half of the green/blue chips' total output (~54-57%, from Q6), removing it cuts their optical efficiency by approximately 2×. This is a genuine efficiency-versus-colour-accuracy trade-off: the lecture reports that a 120° taper angle can partially recover this loss (green to 83%, blue to 86% of the untreated value) while keeping colour shift imperceptible. Reference: Lecture 56, Slide 16."},
+{id:"w11q8",a:11,name:"Assignment 11",q:"According to the chip-size optimisation analysis in the lecture, how does increasing ambient illuminance (e.g. moving from an indoor to a bright outdoor setting) affect the optimal micro-LED chip size for minimum power consumption?",opts:["It pushes the optimal chip size larger","It pushes the optimal chip size smaller","It has no effect on optimal chip size","It eliminates the need for optimisation"],correct:1,exp:"Total display power depends on two competing, chip-size-dependent effects: EQE (and hence power efficiency) improves as chip size grows, while ambient-light reflectance — and hence the on-state luminance needed to maintain a target ACR — also grows with chip size. Under low ambient illuminance the EQE benefit dominates and the optimum shifts to a larger chip (e.g. 16 μm for a TV at 200 lx); under high ambient illuminance the reflectance penalty dominates and the optimum shifts to a smaller chip (e.g. 6 μm for a smartphone at 2000 lx outdoor). Increasing ambient illuminance therefore pushes the optimal chip size smaller, not larger. Reference: Lecture 57, Slide 15-16."},
+{id:"w12q1",a:12,name:"Assignment 12",q:"In LED-to-quantum-dot color conversion, which energy transfer mechanism requires the quantum dots to be in close physical contact with the LED's quantum wells, transferring energy non-radiatively?",opts:["Radiative transfer","Förster Resonance Energy Transfer (FRET)","Conduction","Phonon coupling"],correct:1,exp:"The lecture describes two mechanisms that bridge an LED and a QD colour converter. Radiative transfer is simply the direct emission of photons by the LED, which then travel through space and are absorbed by the QDs — no physical proximity is required. FRET (Förster Resonance Energy Transfer), by contrast, is a non-radiative, near-field dipole-dipole coupling process in which excitation energy tunnels directly from the LED's quantum wells to the QD phosphor layer; it is only effective when the LED and QD layer are in close physical contact (typically within a few nanometres), since the coupling strength falls off steeply with separation. Reference: Lecture 58, Slide 5."},
+{id:"w12q2",a:12,name:"Assignment 12",q:"When a Distributed Bragg Reflector (DBR) was added above an aerosol-jet-printed RGB quantum dot layer on a UV micro-LED array, approximately what increase in the blue-channel visible light intensity was observed?",opts:["+100%","+150%","+194%","+250%"],correct:2,exp:"The DBR is placed above the QD layer to reflect the 395 nm UV pump light that would otherwise leak out unabsorbed, giving each UV photon a second pass through the QD layer and hence a second chance to be absorbed and converted. The lecture reports this UV recycling boosted visible output by Blue: +194%, Green: +173%, Red: +183% — the largest gain is in the blue channel. Reference: Lecture 59, Slide 7."},
+{id:"w12q3",a:12,name:"Assignment 12",q:"At a current density of 200 A/cm^2, what external quantum efficiency (EQE) droop was measured for a semipolar (20-21) blue micro-LED, compared to a c-plane reference device grown under the same conditions?",opts:["Semipolar drops 55%; c-plane drops 14.7%","Semipolar drops 14.7%; c-plane drops 55%","Both drop 55%","Both drop 14.7%"],correct:1,exp:"In c-plane InGaN quantum wells, spontaneous and piezoelectric polarisation charges tilt the conduction and valence bands (the quantum-confined Stark effect, QCSE), separating electron and hole wavefunctions and allowing Auger recombination to dominate at high injection — giving a large 55% EQE droop at 200 A/cm^2. Growing the same MQW on a semipolar (20-21) orientation (via orientation-controlled epitaxy on a patterned sapphire substrate) substantially reduces both polarisation components, keeping the electron-hole overlap high even at large carrier densities, so the measured droop is only 14.7% — about 4× more stable. Reference: Lecture 60, Slide 8."},
+{id:"w12q4",a:12,name:"Assignment 12",q:"After applying a top black matrix and a 120° taper angle to an RGB micro-LED display, what happened to the maximum (worst-case, magenta) angular colour shift Δu'v' across the viewing cone?",opts:["It increased from 0.014 to 0.169","It decreased from 0.169 to 0.014, falling below the 0.02 commercial threshold","It decreased from 0.169 to 0.05","It remained unchanged at 0.169"],correct:1,exp:"Gou et al.'s simulation study quantified angular colour shift across 10 reference colours from 0° to 80°. In the bare (unmitigated) RGB micro-LED array, the worst-case shift (magenta) reached Δu'v' = 0.169 — far above the 0.02 just-noticeable/commercial threshold. Applying a top black matrix together with a 120° taper-angle resin fill blocks the sidewall emission that caused the Batwing pattern in the green/blue chips, forcing all three primaries toward a matched Lambertian distribution; the worst-case shift then fell to 0.014, a 12× reduction and comfortably below the commercial threshold, while the gamut (97% DCI-P3) was unaffected. Reference: Lecture 61, Slide 9."},
+{id:"w12q5",a:12,name:"Assignment 12",q:"According to the mini-LED vs. micro-LED comparison presented in the lecture, what is the typical chip size range for mini-LED, and what is its primary application?",opts:["<100 μm; self-emitting display pixels","100-200 μm; LCD backlight source","200-300 μm; general lighting"," >300 μm; signage"],correct:1,exp:"The lecture's summary table draws a clear line between the two technologies: mini-LED chips are 100-200 μm and are used as a direct-lit, locally-dimmable LCD backlight source (enabling HDR contrast while reusing much of today's LED fabrication infrastructure), whereas micro-LED chips are below 100 μm and are used as self-emitting display pixels in their own right. Mini-LED also already achieves > 80% transfer yield, while micro-LED transfer yield is still hard to estimate reliably at laboratory stage. Reference: Lecture 62, Slide 5."},
+{id:"w12q6",a:12,name:"Assignment 12",q:"Which company's mass-transfer technique uses an electromagnetic coil array to adsorb and reposition micro-LED chips via magnetic force, as summarised in the lecture's comparison table?",opts:["LuxVue (electrostatic array)","ITRI (magnetic array)","X-Celeprint (elastomer stamp)","KIMM (roll-to-plate)"],correct:1,exp:"The lecture's Table 3 lists four distinct mass-transfer mechanisms: LuxVue uses an electrostatic array (dielectric-separated +/- electrode pairs); ITRI uses a magnetic array, in which micro-LEDs are adsorbed and repositioned by the electromagnetic field of a coil array for contactless placement; X-Celeprint uses an elastomer stamp relying on van der Waals adhesion; and KIMM uses a roll-to-plate continuous transfer process. Only ITRI's method is magnetically driven. Reference: Lecture 63, Slide 5."},
+{id:"w12q7",a:12,name:"Assignment 12",q:"What is the key innovation of the InGaNOS (InGaN pseudo-substrate) platform described in the lecture?",opts:["It grows a relaxed InGaN pseudo-substrate seed layer that locally matches the lattice constant needed for a given emission colour, enabling monolithic RGB on one wafer","It uses sapphire substrates for all colours"," It eliminates quantum wells entirely"," It relies on AlGaInP for red emission"],correct:0,exp:"Ordinarily, pushing InGaN quantum wells to higher indium content (needed for green and red emission) on a conventional GaN buffer introduces severe lattice mismatch and poor crystal quality. A. Even et al.'s InGaNOS approach instead first grows a relaxed InGaN 'pseudo-substrate' seed layer, which locally matches the lattice constant needed for a given emission colour; full InGaN LED structures spanning blue (482 nm) all the way to red (617 nm) can then be grown on this common platform — opening a route to monolithic same-material RGB micro-LEDs on a single wafer, which would sidestep the AlGaInP/InGaN material mismatch responsible for angular colour shift and the multi-substrate complexity of conventional RGB chip assembly. Reference: Lecture 63, Slide 10-11."},
+{id:"w12q8",a:12,name:"Assignment 12",q:"What causes the 'coffee-ring effect' observed during quantum dot droplet deposition, and how does a photoresist (PR) mold resolve it?",opts:["Faster evaporation at the droplet centre drives particles inward; PR mold increases evaporation","In an unconfined droplet, evaporation is fastest at the perimeter, driving an outward capillary flow that carries QD particles to the edge, leaving a dense ring; a PR mold confines the droplet to uniform thickness so evaporation is uniform and particles deposit evenly","QDs are too large to deposit uniformly; PR mold filters them"," Coffee-ring is caused by magnetic fields; PR mold shields them"],correct:1,exp:"In an unconfined QD droplet, the liquid layer is thinnest at the perimeter, so it evaporates fastest there; this drives an outward capillary flow that continuously carries suspended QD particles toward the edge, leaving a dense ring at the perimeter and a QD-sparse centre — the classic coffee-ring pattern, which causes position-dependent emission intensity and poor colour uniformity. A photoresist mold confines each QD droplet to a cell of essentially uniform liquid thickness from centre to edge, so evaporation proceeds at a comparable rate everywhere in the cell; with no differential capillary flow to drive particles outward, the QDs deposit uniformly, simultaneously resolving both the coffee-ring problem and (via the mold's blocking walls) optical cross-talk between neighbouring pixels. Reference: Lecture 64, Slide 10-11."},
+];
+</script>
+<script>
+(function () {
+  'use strict';
+
+  const ALL = (window.QUESTIONS || []).map(q => ({ ...q, letter: ['A','B','C','D','E'] }));
+
+  /* ============================================================
+     CSS — injected by JS (completely JS-rendered UI)
+     ============================================================ */
+  const CSS = `
+:root{
+  --bg:#0b1220; --bg2:#0f172e;
+  --card:rgba(255,255,255,.05); --card2:rgba(255,255,255,.03);
+  --bd:rgba(255,255,255,.09); --bd2:rgba(255,255,255,.15);
+  --text:#e6eaf2; --muted:#93a0b4;
+  --accent:#6366f1; --accent2:#8b5cf6;
+  --green:#22c55e; --red:#ef4444; --yellow:#eab308;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,sans-serif;
+  color:var(--text); min-height:100vh;
+  background:
+    radial-gradient(900px 600px at 85% -10%, rgba(99,102,241,.18), transparent 60%),
+    radial-gradient(800px 500px at -10% 110%, rgba(139,92,246,.14), transparent 60%),
+    linear-gradient(180deg,var(--bg),var(--bg2));
+  background-attachment:fixed;
+}
+button{font-family:inherit}
+.topbar{
+  position:sticky;top:0;z-index:10;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:14px 22px;
+  background:rgba(11,18,32,.75);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--bd);
+}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand .logo{
+  width:38px;height:38px;border-radius:12px;flex:0 0 auto;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:grid;place-items:center;font-size:18px;
+  box-shadow:0 6px 18px rgba(99,102,241,.35);
+}
+.brand h1{margin:0;font-size:16px;font-weight:700;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand small{display:block;color:var(--muted);font-size:11px;font-weight:500}
+.wrap{max-width:1200px;margin:0 auto;padding:22px}
+.hidden{display:none!important}
+
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px;backdrop-filter:blur(8px)}
+.card h3{margin:0 0 12px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+.btn{
+  border:1px solid var(--bd2);border-radius:10px;padding:10px 16px;
+  font-weight:600;font-size:14px;cursor:pointer;transition:.15s;
+  color:var(--text);background:rgba(255,255,255,.07);
+}
+.btn:hover{background:rgba(255,255,255,.13)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:transparent;color:#fff;box-shadow:0 6px 18px rgba(99,102,241,.35)}
+.btn.primary:hover{filter:brightness(1.12)}
+.btn.warn{background:rgba(234,179,8,.92);border-color:transparent;color:#241a02}
+.btn.danger{background:rgba(239,68,68,.92);border-color:transparent;color:#fff}
+.btn.sm{padding:6px 12px;font-size:13px;border-radius:8px}
+
+/* ---------- home ---------- */
+.hero{text-align:center;padding:34px 12px 26px}
+.hero h2{margin:0 0 8px;font-size:30px;font-weight:800;letter-spacing:-.01em;
+  background:linear-gradient(90deg,#e6eaf2,#a5b4fc);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:0;color:var(--muted);font-size:15px}
+.pill{display:inline-flex;gap:8px;margin-top:14px;padding:6px 14px;border-radius:999px;
+  background:rgba(255,255,255,.06);border:1px solid var(--bd);color:var(--muted);font-size:12.5px}
+.pill b{color:var(--text)}
+.modes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.mcard{display:flex;flex-direction:column;gap:12px;transition:transform .18s, background .18s;
+  background:var(--card2)}
+.mcard:hover{transform:translateY(-4px);background:var(--card)}
+.mcard .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:22px;
+  background:rgba(99,102,241,.16);border:1px solid rgba(99,102,241,.35)}
+.mcard h4{margin:0;font-size:16.5px}
+.mcard p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.55}
+.mcard .grow{flex:1}
+.select,input[type=number]{
+  width:100%;padding:10px 12px;border-radius:10px;font-size:14px;color:var(--text);
+  background:rgba(255,255,255,.06);border:1px solid var(--bd2);outline:none;
+}
+.select:focus,input[type=number]:focus{border-color:var(--accent)}
+.meta{color:var(--muted);font-size:12px}
+
+/* ---------- quiz layout ---------- */
+.quiz-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px;align-items:start}
+.q-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.badge{padding:6px 12px;border-radius:999px;font-size:12.5px;font-weight:700;
+  background:rgba(99,102,241,.18);border:1px solid rgba(99,102,241,.4);color:#c7d2fe}
+.qcount{color:var(--muted);font-size:13px;font-weight:600}
+.ptrack{height:8px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;margin-bottom:18px}
+.pfill{height:100%;width:0%;border-radius:99px;transition:width .35s;
+  background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.q-No{font-size:12px;font-weight:800;letter-spacing:.14em;color:#a5b4fc;text-transform:uppercase}
+.q-text{margin:8px 0 18px;font-size:17.5px;line-height:1.6;font-weight:600;white-space:pre-wrap}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{
+  display:flex;align-items:flex-start;gap:12px;padding:13px 15px;border-radius:12px;
+  border:1px solid var(--bd2);background:rgba(255,255,255,.03);cursor:pointer;transition:.15s;
+}
+.opt:hover{background:rgba(255,255,255,.08);transform:translateX(3px)}
+.opt.lock{cursor:default;transform:none}
+.opt.lock:hover{background:rgba(255,255,255,.03)}
+.okey{flex:0 0 auto;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  font-weight:800;font-size:13px;background:rgba(255,255,255,.08);border:1px solid var(--bd)}
+.otext{line-height:1.55;font-size:14.5px}
+.othead{display:flex;align-items:center;gap:10px;justify-content:space-between}
+.tag{margin-left:auto;flex:0 0 auto;font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px;white-space:nowrap}
+.tag.good{background:rgba(34,197,94,.22);color:#86efac}
+.tag.bad{background:rgba(239,68,68,.22);color:#fca5a5}
+.opt.right{border-color:var(--green);background:rgba(34,197,94,.13)}
+.opt.right .okey{background:var(--green);border-color:transparent;color:#052e16}
+.opt.wrongp{border-color:var(--red);background:rgba(239,68,68,.13)}
+.opt.wrongp .okey{background:var(--red);border-color:transparent;color:#450a0a}
+
+.fb{display:flex;align-items:center;gap:10px;margin-top:16px;padding:12px 14px;border-radius:12px;font-weight:700;font-size:14.5px}
+.fb .ic{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:14px}
+.fb.ok{background:rgba(34,197,94,.14);border:1px solid rgba(34,197,94,.45);color:#86efac}
+.fb.ok .ic{background:var(--green);color:#052e16}
+.fb.bad{background:rgba(239,68,68,.14);border:1px solid rgba(239,68,68,.45);color:#fca5a5}
+.fb.bad .ic{background:var(--red);color:#fff}
+.fb small{font-weight:500;color:inherit;opacity:.85}
+
+.explain{margin-top:10px;padding:13px 15px;border-radius:12px;line-height:1.62;font-size:14px;
+  background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.35);color:#c7d2fe}
+.explain .lbl{display:block;margin-bottom:5px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#a5b4fc}
+
+.q-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+
+/* ---------- sidebar ---------- */
+.side{display:flex;flex-direction:column;gap:16px;position:sticky;top:86px}
+.srow{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.09)}
+.srow:last-child{border-bottom:none}
+.srow span{color:var(--muted);font-size:13px}
+.srow b{font-size:15px}
+.srow.acc b{font-size:19px;color:#86efac}
+.dot{display:inline-flex;width:11px;height:11px;border-radius:4px;margin-right:7px;vertical-align:-1px;border:1px solid rgba(255,255,255,.25)}
+.dot.g{background:var(--green);border-color:transparent}
+.dot.r{background:var(--red);border-color:transparent}
+.dot.y{background:var(--yellow);border-color:transparent}
+.dot.w{background:rgba(255,255,255,.85);border-color:rgba(255,255,255,.45)}
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:7px 12px;font-size:12.5px;color:var(--muted);margin:6px 0 12px}
+.legend i{display:inline-flex;align-items:center;font-style:normal}
+.palette{display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:8px}
+.chip{aspect-ratio:1;border-radius:10px;display:grid;place-items:center;font-size:12.5px;font-weight:700;
+  border:1px solid var(--bd2);background:rgba(255,255,255,.05);cursor:pointer;transition:.12s;color:var(--text)}
+.chip:hover{transform:scale(1.08)}
+.chip.g{background:var(--green);border-color:transparent;color:#052e16}
+.chip.r{background:var(--red);border-color:transparent;color:#450a0a}
+.chip.y{background:var(--yellow);border-color:transparent;color:#3b2a02}
+.chip.cur{outline:2px solid var(--accent);outline-offset:2px}
+.chip .m{position:relative}
+.chip .m::after{content:'';position:absolute;top:-5px;right:-5px;width:8px;height:8px;border-radius:50%;
+  background:var(--yellow);border:1.5px solid #3b2a02}
+.qmark{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12.5px;margin-left:4px}
+
+/* ---------- result ---------- */
+.result{display:flex;flex-direction:column;align-items:center;gap:18px;padding:34px 18px}
+.rtitle{font-size:26px;font-weight:800;margin:0;letter-spacing:-.01em}
+.donut{position:relative;width:180px;height:180px;border-radius:50%;
+  display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.donut .hole{position:absolute;inset:15px;border-radius:50%;background:#0d1526;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.donut .hole b{font-size:34px}
+.donut .hole span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;width:100%;max-width:640px}
+.rbox{background:var(--card2);border:1px solid var(--bd);border-radius:12px;padding:14px;text-align:center}
+.rbox span{display:block;color:var(--muted);font-size:12px;margin-bottom:4px}
+.rbox b{font-size:24px}
+.atable{width:100%;max-width:640px;border-collapse:collapse;font-size:13.5px}
+.atable th, .atable td{padding:8px 10px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08)}
+.atable th{color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.atable td:last-child, .atable th:last-child{text-align:right}
+.bar{height:6px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:99px}
+.rbtns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.anim{animation:fadeUp .28s ease}
+@media(max-width:920px){
+  .quiz-grid{grid-template-columns:1fr}
+  .side{position:static}
+  .brand small{display:none}
+}
+`;
+  const style = document.createElement('style');
+  style.textContent = CSS;
+  document.head.appendChild(style);
+
+  /* ============================================================
+     Helpers
+     ============================================================ */
+  const root = document.getElementById('root');
+  const LETTERS = ['A','B','C','D','E','F'];
+
+  function h(tag, attrs, ...children) {
+    const el = document.createElement(tag);
+    if (attrs) for (const [k, v] of Object.entries(attrs)) {
+      if (v === null || v === undefined || v === false) continue;
+      if (k === 'class') el.className = v;
+      else if (k === 'html') el.innerHTML = v;
+      else if (k === 'text') el.textContent = v;
+      else if (k.startsWith('on')) el.addEventListener(k.slice(2), v);
+      else el.setAttribute(k, v === true ? '' : String(v));
+    }
+    for (const c of children.flat(Infinity)) {
+      if (c === null || c === undefined || c === false) continue;
+      el.appendChild(c instanceof Node ? c : document.createTextNode(String(c)));
+    }
+    return el;
+  }
+  const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const shuffle = a => { const b=a.slice(); for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [b[i],b[j]]=[b[j],b[i]];} return b; };
+
+  /* ============================================================
+     State
+     ============================================================ */
+  let qs = [], ans = [], done = [], marked = [], idx = 0, modeTitle = '';
+  const ui = {};
+
+  /* ============================================================
+     Screens
+     ============================================================ */
+  function topbar(sub, showHome, onHome) {
+    return h('header', { class:'topbar' },
+      h('div', { class:'brand' },
+        h('div', { class:'logo' }, '📺'),
+        h('div', {},
+          h('h1', { text:'Modern Display Technologies' }),
+          h('small', { text: sub })
+        )
+      ),
+      showHome ? h('button', { class:'btn sm', onclick:onHome }, '⟵ Home') : null
+    );
+  }
+
+  function goHome() { clearState(); homeScreen(); }
+  function clearState(){ qs=[]; ans=[]; done=[]; marked=[]; idx=0; }
+
+  /* ---------- HOME ---------- */
+  function homeScreen() {
+    const byAssign = [...new Set(ALL.map(q => q.a))].sort((a,b)=>a-b);
+    const sel = h('select', { class:'select' },
+      byAssign.map(a =>
+        h('option', { value:a }, `Assignment ${a}  —  ${ALL.filter(q=>q.a===a).length} questions`)
+      )
+    );
+    const count = h('input', { type:'number', min:'5', max:String(ALL.length), value:'20' });
+
+    const screen = h('div', {},
+      topbar(`${ALL.length} questions · ${byAssign.length} assignments`, false),
+      h('main', { class:'wrap' },
+        h('section', { class:'hero anim' },
+          h('h2', { text:'NPTEL Quiz Trainer' }),
+          h('p', { text:'Practice assignment-wise, random, or the complete test — with instant answers & explanations.' }),
+          h('div', { class:'pill' },
+            h('b', { text:String(ALL.length) }), 'questions',
+            h('span', { text:'·' }),
+            h('b', { text:String(byAssign.length) }), 'assignments'
+          )
+        ),
+        h('section', { class:'modes anim' },
+          // assignment-wise
+          h('div', { class:'card mcard' },
+            h('div', { class:'ico' }, '📚'),
+            h('h4', { text:'Assignment-wise Quiz' }),
+            h('p', { text:'Pick one assignment and attempt its full question paper.' }),
+            h('div', { class:'grow' }),
+            sel,
+            h('button', { class:'btn primary', onclick:()=>{
+                const a = +sel.value;
+                startQuiz(ALL.filter(q=>q.a===a).slice(), `Assignment ${a} Quiz`);
+            } }, 'Start Quiz'),
+            h('span', { class:'meta', text:'Practice mode · stats on the right' })
+          ),
+          // random
+          h('div', { class:'card mcard' },
+            h('div', { class:'ico' }, '🎲'),
+            h('h4', { text:'Random Assignment Test' }),
+            h('p', { text:'A shuffled mix of questions from every assignment.' }),
+            h('div', { class:'grow' }),
+            count,
+            h('button', { class:'btn primary', onclick:()=>{
+                const n = Math.max(1, Math.min(ALL.length, +count.value || 20));
+                startQuiz(shuffle(ALL).slice(0, n), 'Random Test');
+            } }, 'Start Test'),
+            h('span', { class:'meta', text:'Timed pressure comes from you — stats live on the right' })
+          ),
+          // complete
+          h('div', { class:'card mcard' },
+            h('div', { class:'ico' }, '🏁'),
+            h('h4', { text:'Complete Assignment Test' }),
+            h('p', { text:'Every question, every assignment, in order. The full grind.' }),
+            h('div', { class:'grow' }),
+            h('button', { class:'btn primary', onclick:()=>startQuiz(ALL.slice(), 'Complete Test') }, 'Start Full Test'),
+            h('span', { class:'meta', text:'Per-assignment breakdown at the end' })
+          )
+        )
+      ),
+      h('footer', { class:'wrap', style:'text-align:center;color:var(--muted);font-size:12px;padding-top:8px' },
+        'Built from OCR of NPTEL solution PDFs · Modern Display Technologies: Flat Panel Displays (IIT Guwahati)'
+      )
+    );
+    root.innerHTML = '';
+    root.appendChild(screen);
+  }
+
+  /* ---------- QUIZ ---------- */
+  function startQuiz(list, title) {
+    qs = list; modeTitle = title; idx = 0;
+    ans = new Array(qs.length).fill(null);
+    done = new Array(qs.length).fill(false);
+    marked = new Array(qs.length).fill(false);
+    quizScreen();
+  }
+
+  function status(i) {
+    if (done[i]) return ans[i] === qs[i].correct ? 'g' : 'r';
+    if (marked[i]) return 'y';
+    return '';
+  }
+
+  function quizScreen() {
+    // sidebar (built once)
+    ui.sTotal  = h('b', { text:'0' });
+    ui.sAtt    = h('b', { text:'0' });
+    ui.sOk     = h('b', { text:'0' });
+    ui.sWrong  = h('b', { text:'0' });
+    ui.sAcc    = h('b', { text:'0%' });
+    ui.palette = h('div', { class:'palette' });
+    ui.legG    = h('b', { text:'0' });
+    ui.legR    = h('b', { text:'0' });
+    ui.legY    = h('b', { text:'0' });
+    ui.legW    = h('b', { text:'0' });
+
+    const side = h('aside', { class:'side' },
+      h('div', { class:'card' },
+        h('h3', { text:'Stats' }),
+        h('div', { class:'srow' }, h('span', {text:'Total questions'}), ui.sTotal),
+        h('div', { class:'srow' }, h('span', {text:'Attempted'}), ui.sAtt),
+        h('div', { class:'srow' }, h('span', {text:'Correct'}), ui.sOk),
+        h('div', { class:'srow' }, h('span', {text:'Wrong'}), ui.sWrong),
+        h('div', { class:'srow acc' }, h('span', {text:'Accuracy'}), ui.sAcc),
+        h('div', { class:'srow' }, h('span', {text:'Marked for review'}), h('b',{text:'0', id:'mk'}))
+      ),
+      h('div', { class:'card' },
+        h('h3', { text:'Questions' }),
+        h('div', { class:'legend' },
+          h('i', {}, h('span',{class:'dot g'}), 'Correct ', ui.legG),
+          h('i', {}, h('span',{class:'dot r'}), 'Wrong ', ui.legR),
+          h('i', {}, h('span',{class:'dot y'}), 'Review ', ui.legY),
+          h('i', {}, h('span',{class:'dot w'}), 'Unattempted ', ui.legW)
+        ),
+        ui.palette,
+        h('div', { class:'qmark', style:'margin-top:10px' },
+          h('span', { text:'⚑ = also marked for review' })
+        )
+      )
+    );
+
+    // main
+    ui.badge   = h('span', { class:'badge', text:modeTitle });
+    ui.qcount  = h('span', { class:'qcount' });
+    ui.pfill   = h('div', { class:'pfill' });
+    ui.qNo     = h('div', { class:'q-No' });
+    ui.qText   = h('div', { class:'q-text' });
+    ui.opts    = h('div', { class:'opts' });
+    ui.fb      = h('div', { class:'fb ok hidden' });
+    ui.explain = h('div', { class:'explain hidden' });
+
+    ui.bPrev  = h('button', { class:'btn',        onclick:()=>goto(idx-1) }, '← Prev');
+    ui.bNext  = h('button', { class:'btn',        onclick:()=>goto(idx+1) }, 'Next →');
+    ui.bSkip  = h('button', { class:'btn',        onclick:skip }, '⏭ Skip');
+    ui.bMark  = h('button', { class:'btn warn',   onclick:toggleMark }, '⚑ Mark for review');
+    ui.bFin   = h('button', { class:'btn danger', onclick:confirmFinish }, 'Finish');
+
+    const main = h('section', { class:'card anim' },
+      h('div', { class:'q-head' }, ui.badge, ui.qcount),
+      h('div', { class:'ptrack' }, ui.pfill),
+      ui.qNo, ui.qText, ui.opts, ui.fb, ui.explain,
+      h('div', { class:'q-actions' }, ui.bPrev, ui.bSkip, ui.bNext, ui.bMark, ui.bFin)
+    );
+
+    const screen = h('div', {},
+      topbar(modeTitle, true, ()=>{ if(confirm('Leave the quiz? Progress will be lost.')) goHome(); }),
+      h('main', { class:'wrap' },
+        h('div', { class:'quiz-grid' }, main, side)
+      )
+    );
+    root.innerHTML = '';
+    root.appendChild(screen);
+
+    renderQ();
+    updateSide();
+  }
+
+  function renderQ() {
+    const q = qs[idx];
+    ui.badge.textContent = modeTitle;
+    ui.qcount.textContent = `Question ${idx+1} of ${qs.length}`;
+    ui.pfill.style.width = `${Math.round(((idx+1)/qs.length)*100)}%`;
+    ui.qNo.textContent = `Q${idx+1}`;
+    ui.qText.textContent = q.q;
+
+    // options
+    ui.opts.innerHTML = '';
+    const answered = done[idx];
+    q.opts.forEach((t, i) => {
+      const head = h('div', { class:'othead' }, h('span', { class:'otext', text:t }));
+      const row = h('div', { class:'opt' + (answered ? ' lock' : ''),
+        onclick: answered ? null : () => grade(i) },
+        h('span', { class:'okey', text:LETTERS[i] }),
+        head
+      );
+      if (answered) {
+        if (i === q.correct) {
+          row.classList.add('right');
+          head.appendChild(h('span', { class:'tag good', text:ans[idx]===i ? '✓ your answer · correct' : 'correct answer' }));
+        } else if (ans[idx] === i) {
+          row.classList.add('wrongp');
+          head.appendChild(h('span', { class:'tag bad', text:'✗ your answer' }));
+        }
+      }
+      ui.opts.appendChild(row);
+    });
+
+    // feedback
+    if (answered) {
+      const ok = ans[idx] === q.correct;
+      ui.fb.className = 'fb ' + (ok ? 'ok' : 'bad');
+      ui.fb.innerHTML = '';
+      ui.fb.appendChild(h('span', { class:'ic', text: ok ? '✓' : '✗' }));
+      ui.fb.appendChild(h('span', { html: ok ? 'Correct! <small>+1</small>'
+                                             : `Wrong! <small>correct answer is ${LETTERS[q.correct]}</small>` }));
+      ui.fb.classList.remove('hidden');
+      if (q.exp) {
+        ui.explain.innerHTML = `<span class="lbl">Explanation</span>${esc(q.exp)}`;
+        ui.explain.classList.remove('hidden');
+      } else {
+        ui.explain.classList.add('hidden');
+      }
+    } else {
+      ui.fb.classList.add('hidden');
+      ui.explain.classList.add('hidden');
+    }
+
+    ui.bMark.textContent = marked[idx] ? '⚑ Marked ✓' : '⚑ Mark for review';
+    ui.bPrev.disabled = idx === 0;
+    ui.bNext.disabled = idx === qs.length - 1;
+    ui.bFin.textContent = idx === qs.length - 1 ? 'Finish & Results' : 'Finish';
+
+    highlightPalette();
+  }
+
+  function grade(i) {
+    if (done[idx]) return;
+    ans[idx] = i;
+    done[idx] = true;
+    renderQ();
+    updateSide();
+  }
+
+  function skip() {
+    if (done[idx]) { goto(idx + 1); return; }
+    let j = idx;
+    for (let k = 0; k < qs.length; k++) {
+      j = (j + 1) % qs.length;
+      if (!done[j] && !marked[j]) break;
+    }
+    goto(j === idx ? Math.min(idx + 1, qs.length - 1) : j);
+  }
+
+  function toggleMark() {
+    marked[idx] = !marked[idx];
+    renderQ();
+    updateSide();
+  }
+
+  function goto(i) {
+    if (i < 0 || i >= qs.length) return;
+    idx = i;
+    renderQ();
+  }
+
+  function confirmFinish() {
+    const left = done.filter(d => !d).length;
+    if (left && !confirm(`${left} question(s) unanswered. Finish anyway?`)) return;
+    finish();
+  }
+
+  /* ---------- live stats + palette ---------- */
+  function updateSide() {
+    let att = 0, ok = 0, wrong = 0, mk = 0, y = 0, w = 0;
+    for (let i = 0; i < qs.length; i++) {
+      if (done[i]) { att++; ans[i] === qs[i].correct ? ok++ : wrong++; }
+      else { marked[i] ? y++ : w++; }
+      if (marked[i]) mk++;
+    }
+    ui.sTotal.textContent = qs.length;
+    ui.sAtt.textContent   = att;
+    ui.sOk.textContent    = ok;
+    ui.sWrong.textContent = wrong;
+    ui.sAcc.textContent   = (att ? Math.round(ok / att * 100) : 0) + '%';
+    const mkEl = document.getElementById('mk');
+    if (mkEl) mkEl.textContent = mk;
+    ui.legG.textContent = ok;
+    ui.legR.textContent = wrong;
+    ui.legY.textContent = y;
+    ui.legW.textContent = w;
+
+    ui.palette.innerHTML = '';
+    for (let i = 0; i < qs.length; i++) {
+      const cls = 'chip ' + status(i) + (i === idx ? ' cur' : '');
+      const chip = h('button', { class:cls, title:`Q${i+1}`, onclick:()=>goto(i) },
+        marked[i] && !done[i] ? '⚑' : (i + 1)
+      );
+      ui.palette.appendChild(chip);
+    }
+    highlightPalette();
+  }
+
+  function highlightPalette() {
+    [...ui.palette.children].forEach((c, i) => c.classList.toggle('cur', i === idx));
+  }
+
+  /* ---------- RESULT ---------- */
+  function finish() {
+    let att = 0, ok = 0, wrong = 0;
+    const per = Object.create(null);
+    qs.forEach((q, i) => {
+      const key = q.name || ('Assignment ' + q.a);
+      if (!per[key]) per[key] = { n: 0, ok: 0 };
+      const a = per[key];
+      a.n++;
+      if (done[i]) {
+        att++;
+        if (ans[i] === q.correct) { ok++; a.ok++; } else wrong++;
+      }
+    });
+    const acc = att ? Math.round(ok / att * 100) : 0;
+
+    const donut = h('div', { class:'donut',
+      style:`background:conic-gradient(var(--green) ${acc}%, rgba(255,255,255,.09) ${acc}%)` },
+      h('div', { class:'hole' }, h('b', { text:acc + '%' }), h('span', { text:'accuracy' }))
+    );
+
+    const rows = Object.entries(per).map(([name, s]) => {
+      const p = Math.round(s.ok / s.n * 100);
+      return h('tr', {},
+        h('td', { text:name }),
+        h('td', { text:`${s.ok}/${s.n}` }),
+        h('td', {},
+          h('span', { text:p + '%' }),
+          h('div', { class:'bar' }, h('i', { style:`width:${p}%` }))
+        )
+      );
+    });
+
+    const screen = h('div', {},
+      topbar('Results', true, goHome),
+      h('main', { class:'wrap' },
+        h('div', { class:'card result anim' },
+          h('h2', { class:'rtitle', text:modeTitle + ' — Complete!' }),
+          donut,
+          h('div', { class:'rgrid' },
+            h('div', { class:'rbox' }, h('span', {text:'Total'}),    h('b', {text:String(qs.length)})),
+            h('div', { class:'rbox' }, h('span', {text:'Attempted'}),h('b', {text:String(att)})),
+            h('div', { class:'rbox' }, h('span', {text:'Correct'}),  h('b', {text:String(ok), style:'color:#86efac'})),
+            h('div', { class:'rbox' }, h('span', {text:'Wrong'}),    h('b', {text:String(wrong), style:'color:#fca5a5'})),
+            h('div', { class:'rbox' }, h('span', {text:'Skipped'}),  h('b', {text:String(qs.length - att)}))
+          ),
+          rows.length > 1 ? h('table', { class:'atable' },
+            h('thead', {}, h('tr', {}, h('th', {text:'Assignment'}), h('th', {text:'Score'}), h('th', {text:'Accuracy'}))),
+            h('tbody', {}, rows)
+          ) : null,
+          h('div', { class:'rbtns' },
+            h('button', { class:'btn primary', onclick:()=>{ clearState(); homeScreen(); } }, '🏠 Back to Home'),
+            h('button', { class:'btn', onclick:()=>startQuiz(qs.slice(), modeTitle) }, '🔄 Retry Same Set')
+          )
+        )
+      )
+    );
+    root.innerHTML = '';
+    root.appendChild(screen);
+  }
+
+  /* ---------- keyboard ---------- */
+  document.addEventListener('keydown', e => {
+    if (!qs.length) return;
+    if (e.key >= '1' && e.key <= String(qs[idx].opts.length)) {
+      if (!done[idx]) { grade(+e.key - 1); e.preventDefault(); }
+    } else if (e.key === 'ArrowRight') { goto(idx + 1); }
+    else if (e.key === 'ArrowLeft')  { goto(idx - 1); }
+  });
+
+  /* ---------- boot + never show a blank page ---------- */
+  function paintError(msg) {
+    document.body.style.cssText = 'font-family:sans-serif;background:#0b1220;color:#fff;margin:0;padding:24px';
+    const box = document.getElementById('root') || document.body;
+    if (box !== document.body) { box.innerHTML = ''; }
+    const d = document.createElement('pre');
+    d.style.cssText = 'white-space:pre-wrap;background:#3b1111;border:1px solid #ef4444;color:#fecaca;padding:16px;border-radius:12px;max-width:900px;margin:20px auto';
+    d.textContent = 'Quiz app hit an error:\n\n' + msg;
+    box.appendChild(d);
+  }
+  window.addEventListener('error', e => { if (!document.body.innerText.includes('error:')) paintError(e.message + '\n' + (e.error && e.error.stack || '')); });
+
+  try {
+    homeScreen();
+  } catch (err) {
+    paintError(err.message + '\n' + (err.stack || ''));
+  }
+})();
+</script>
+</body>
+</html>
