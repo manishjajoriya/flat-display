@@ -211,6 +211,7 @@ button{font-family:inherit}
 .q-text{margin:8px 0 18px;font-size:17.5px;line-height:1.6;font-weight:600;white-space:pre-wrap}
 .opts{display:flex;flex-direction:column;gap:10px}
 .opt{
+  position:relative;
   display:flex;align-items:flex-start;gap:12px;padding:13px 15px;border-radius:12px;
   border:1px solid var(--bd2);background:rgba(255,255,255,.03);cursor:pointer;transition:.15s;
 }
@@ -219,15 +220,18 @@ button{font-family:inherit}
 .opt.lock:hover{background:rgba(255,255,255,.03)}
 .okey{flex:0 0 auto;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
   font-weight:800;font-size:13px;background:rgba(255,255,255,.08);border:1px solid var(--bd)}
-.otext{line-height:1.55;font-size:14.5px}
-.othead{display:flex;align-items:center;gap:10px;justify-content:space-between}
-.tag{margin-left:auto;flex:0 0 auto;font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px;white-space:nowrap}
-.tag.good{background:rgba(34,197,94,.22);color:#86efac}
-.tag.bad{background:rgba(239,68,68,.22);color:#fca5a5}
+.otext{line-height:1.55;font-size:14.5px;padding-right:38px}
 .opt.right{border-color:var(--green);background:rgba(34,197,94,.13)}
 .opt.right .okey{background:var(--green);border-color:transparent;color:#052e16}
 .opt.wrongp{border-color:var(--red);background:rgba(239,68,68,.13)}
 .opt.wrongp .okey{background:var(--red);border-color:transparent;color:#450a0a}
+.ostate{
+  position:absolute;top:50%;right:13px;transform:translateY(-50%);
+  width:24px;height:24px;border-radius:50%;display:grid;place-items:center;
+  font-size:13px;font-weight:800;flex:0 0 auto;
+}
+.ostate.ok{background:var(--green);color:#052e16}
+.ostate.bad{background:var(--red);color:#fff}
 
 .fb{display:flex;align-items:center;gap:10px;margin-top:16px;padding:12px 14px;border-radius:12px;font-weight:700;font-size:14.5px}
 .fb .ic{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:14px}
@@ -350,8 +354,32 @@ button{font-family:inherit}
     );
   }
 
-  function goHome() { clearState(); homeScreen(); }
-  function clearState(){ qs=[]; ans=[]; done=[]; marked=[]; idx=0; }
+  /* ---------- history: browser Back / Forward move between app screens ---------- */
+  const BY_ID = new Map(ALL.map(q => [q.id, q]));
+  function pushScreen(screen) {
+    const st = { screen };
+    if (screen !== 'home') {
+      st.title = modeTitle;
+      st.ids = qs.map(q => q.id);
+      st.ans = [...ans]; st.done = [...done]; st.marked = [...marked]; st.idx = idx;
+    }
+    try { history.pushState(st, '', '#/' + screen); } catch (_) { /* e.g. file:// */ }
+  }
+  function restore(st) {
+    if (!st || !st.screen || st.screen === 'home') { homeScreen(); return; }
+    qs = (st.ids || []).map(id => BY_ID.get(id)).filter(Boolean);
+    if (!qs.length) { homeScreen(); return; }
+    modeTitle = st.title || '';
+    ans    = (st.ans    || []).slice(0, qs.length);
+    done   = (st.done   || []).slice(0, qs.length).map(Boolean);
+    marked = (st.marked || []).slice(0, qs.length).map(Boolean);
+    while (ans.length    < qs.length) ans.push(null);
+    while (done.length   < qs.length) done.push(false);
+    while (marked.length < qs.length) marked.push(false);
+    idx = Math.max(0, Math.min(st.idx || 0, qs.length - 1));
+    if (st.screen === 'quiz') quizScreen(); else finish(false);
+  }
+  function goHome() { pushScreen('home'); homeScreen(); }
 
   /* ---------- HOME ---------- */
   function homeScreen() {
@@ -428,6 +456,7 @@ button{font-family:inherit}
     done = new Array(qs.length).fill(false);
     marked = new Array(qs.length).fill(false);
     quizScreen();
+    pushScreen('quiz');
   }
 
   function status(i) {
@@ -498,7 +527,7 @@ button{font-family:inherit}
     );
 
     const screen = h('div', {},
-      topbar(modeTitle, true, ()=>{ if(confirm('Leave the quiz? Progress will be lost.')) goHome(); }),
+      topbar(modeTitle, true, ()=>{ if(confirm('Go home? You can return here with the browser Back button.')) goHome(); }),
       h('main', { class:'wrap' },
         h('div', { class:'quiz-grid' }, main, side)
       )
@@ -518,23 +547,23 @@ button{font-family:inherit}
     ui.qNo.textContent = `Q${idx+1}`;
     ui.qText.textContent = q.q;
 
-    // options
+    // options — status badge is absolutely positioned so the text never reflows
     ui.opts.innerHTML = '';
     const answered = done[idx];
     q.opts.forEach((t, i) => {
-      const head = h('div', { class:'othead' }, h('span', { class:'otext', text:t }));
       const row = h('div', { class:'opt' + (answered ? ' lock' : ''),
         onclick: answered ? null : () => grade(i) },
         h('span', { class:'okey', text:LETTERS[i] }),
-        head
+        h('span', { class:'otext', text:t })
       );
       if (answered) {
         if (i === q.correct) {
           row.classList.add('right');
-          head.appendChild(h('span', { class:'tag good', text:ans[idx]===i ? '✓ your answer · correct' : 'correct answer' }));
+          row.appendChild(h('span', { class:'ostate ok', text:'✓',
+            title: ans[idx] === i ? 'Your answer — correct' : 'Correct answer' }));
         } else if (ans[idx] === i) {
           row.classList.add('wrongp');
-          head.appendChild(h('span', { class:'tag bad', text:'✗ your answer' }));
+          row.appendChild(h('span', { class:'ostate bad', text:'✗', title:'Your answer — wrong' }));
         }
       }
       ui.opts.appendChild(row);
@@ -640,7 +669,7 @@ button{font-family:inherit}
   }
 
   /* ---------- RESULT ---------- */
-  function finish() {
+  function finish(push) {
     let att = 0, ok = 0, wrong = 0;
     const per = Object.create(null);
     qs.forEach((q, i) => {
@@ -690,7 +719,7 @@ button{font-family:inherit}
             h('tbody', {}, rows)
           ) : null,
           h('div', { class:'rbtns' },
-            h('button', { class:'btn primary', onclick:()=>{ clearState(); homeScreen(); } }, '🏠 Back to Home'),
+            h('button', { class:'btn primary', onclick:goHome }, '🏠 Back to Home'),
             h('button', { class:'btn', onclick:()=>startQuiz(qs.slice(), modeTitle) }, '🔄 Retry Same Set')
           )
         )
@@ -698,6 +727,7 @@ button{font-family:inherit}
     );
     root.innerHTML = '';
     root.appendChild(screen);
+    if (push !== false) pushScreen('result');
   }
 
   /* ---------- keyboard ---------- */
@@ -721,11 +751,15 @@ button{font-family:inherit}
   }
   window.addEventListener('error', e => { if (!document.body.innerText.includes('error:')) paintError(e.message + '\n' + (e.error && e.error.stack || '')); });
 
+  try { history.replaceState({ screen: 'home' }, '', '#/home'); } catch (_) { /* e.g. file:// */ }
   try {
     homeScreen();
   } catch (err) {
     paintError(err.message + '\n' + (err.stack || ''));
   }
+  window.addEventListener('popstate', e => {
+    try { restore(e.state || { screen: 'home' }); } catch (err) { paintError(err.message + '\n' + (err.stack || '')); }
+  });
 })();
 </script>
 </body>
