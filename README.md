@@ -7,9 +7,10 @@ A single-file practice/quiz app built from OCR of NPTEL *"Modern Display Technol
 ## Features
 
 - **Assignment-wise** — pick one of the 12 assignments (96 questions total).
-- **Random Assignment Test** — shuffled mix of questions from all assignments.
+- **Random Assignment Test** — shuffled mix of questions from all assignments, **50 by default** (adjustable 1–96).
+- **Selected Assignment Test** — tick one or more assignments to test on; questions appear in assignment order and **every question carries a color-coded badge showing which assignment it came from**. Per-assignment accuracy breakdown at the end.
 - **Complete Assignment Test** — every question, in order, with a per-assignment breakdown.
-- **Instant grading** — the moment you click an option the question locks in: your pick turns red if wrong, the correct option turns green, plus the explanation where one exists in the source PDFs. Status icons sit in a fixed slot on the right, so option text never shifts or reflows when graded.
+- **Instant grading** — the moment you click an option the question locks in: your pick turns red if wrong, the correct option turns green, plus the explanation where one exists in the source PDFs. Status icons sit in a fixed slot on the right, so option text never shifts or reflows when graded. In multi-assignment tests, a colored "Assignment N" pill next to the mode badge marks each question's source assignment.
 - **Browser Back / Forward** — app screens (Home → Quiz → Results) are real history entries; pressing Back returns you to the previous screen exactly as you left it, and stepping further back/forward keeps working.
 - **Skip**, **Mark for Review**, Previous/Next, and a question palette to jump anywhere.
 - **Live stats panel** — Total / Attempted / Correct / Wrong / Accuracy with color-coded palette: green = attempted correct, red = attempted wrong, white = unattempted, yellow = marked for review.

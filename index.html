@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Modern Display Technologies — Quiz</title>
-<meta name="description" content="Assignment-wise, random and complete quiz tests for the NPTEL course 'Modern Display Technologies: Flat Panel Displays' — instant answers, explanations and live stats.">
+<meta name="description" content="Assignment-wise, random, selected-assignment and complete quiz tests for the NPTEL course 'Modern Display Technologies: Flat Panel Displays' — instant answers, explanations and live stats.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='0' y='14' font-size='14'%3E%F0%9F%93%BA%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -197,6 +197,15 @@ button{font-family:inherit}
 }
 .select:focus,input[type=number]:focus{border-color:var(--accent)}
 .meta{color:var(--muted);font-size:12px}
+/* selected-assignment picker */
+.asgsum{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:2px}
+.asggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.asgchk{position:relative;display:grid;place-items:center;padding:9px 2px;border-radius:9px;
+  font-size:13px;font-weight:700;color:var(--muted);cursor:pointer;user-select:none;
+  border:1px solid var(--bd2);background:rgba(255,255,255,.05);transition:.12s}
+.asgchk:hover{background:rgba(255,255,255,.1)}
+.asgchk input{position:absolute;opacity:0;pointer-events:none}
+.asgchk.on{border-color:rgba(99,102,241,.55);background:rgba(99,102,241,.22);color:#c7d2fe}
 
 /* ---------- quiz layout ---------- */
 .quiz-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px;align-items:start}
@@ -204,6 +213,8 @@ button{font-family:inherit}
 .badge{padding:6px 12px;border-radius:999px;font-size:12.5px;font-weight:700;
   background:rgba(99,102,241,.18);border:1px solid rgba(99,102,241,.4);color:#c7d2fe}
 .qcount{color:var(--muted);font-size:13px;font-weight:600}
+.qasg{padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;
+  border:1px solid rgba(255,255,255,.18);white-space:nowrap}
 .ptrack{height:8px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;margin-bottom:18px}
 .pfill{height:100%;width:0%;border-radius:99px;transition:width .35s;
   background:linear-gradient(90deg,var(--accent),var(--accent2))}
@@ -331,6 +342,17 @@ button{font-family:inherit}
   }
   const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   const shuffle = a => { const b=a.slice(); for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [b[i],b[j]]=[b[j],b[i]];} return b; };
+  // sorted ascending assignment numbers -> "1–3, 7"
+  const asgRuns = list => {
+    const runs = [];
+    let s = list[0], p = list[0];
+    for (let i = 1; i <= list.length; i++) {
+      const c = i < list.length ? list[i] : NaN;
+      if (c !== p + 1) { runs.push(s === p ? String(s) : s + '–' + p); s = c; }
+      p = c;
+    }
+    return runs.join(', ');
+  };
 
   /* ============================================================
      State
@@ -389,14 +411,47 @@ button{font-family:inherit}
         h('option', { value:a }, `Assignment ${a}  —  ${ALL.filter(q=>q.a===a).length} questions`)
       )
     );
-    const count = h('input', { type:'number', min:'5', max:String(ALL.length), value:'20' });
+    const count = h('input', { type:'number', min:'5', max:String(ALL.length), value:'50' });
+
+    // selected-assignment picker
+    const asgGrid = h('div', { class:'asggrid' });
+    const asgChips = [];
+    const asgBoxes = byAssign.map(a => {
+      const cb = h('input', { type:'checkbox', value:String(a) });
+      const chip = h('label', { class:'asgchk', title:'Assignment ' + a }, cb, h('span', { text:String(a) }));
+      cb.addEventListener('change', () => { chip.classList.toggle('on', cb.checked); updateSummary(); });
+      asgChips.push(chip);
+      asgGrid.appendChild(chip);
+      return cb;
+    });
+    const asgSum = h('span', { class:'meta', text:'No assignments selected' });
+    const pickedAsg = () => asgBoxes.filter(b => b.checked).map(b => +b.value);
+    const asgToggle = h('button', { class:'btn sm', onclick:() => {
+        const all = asgBoxes.length && asgBoxes.every(b => b.checked);
+        asgBoxes.forEach((b, i) => { b.checked = !all; asgChips[i].classList.toggle('on', b.checked); });
+        updateSummary();
+    } }, 'Select all');
+    const startSel = h('button', { class:'btn primary', disabled:true, onclick:() => {
+        const picks = pickedAsg();
+        if (!picks.length) return;
+        startQuiz(ALL.filter(q => picks.includes(q.a)), 'Assignments ' + asgRuns(picks) + ' Test');
+    } }, 'Start Test');
+    function updateSummary() {
+      const picks = pickedAsg();
+      const nq = picks.length ? ALL.filter(q => picks.includes(q.a)).length : 0;
+      asgSum.textContent = picks.length
+        ? `${picks.length} assignment${picks.length > 1 ? 's' : ''} selected · ${nq} questions`
+        : 'No assignments selected';
+      startSel.disabled = !picks.length;
+      asgToggle.textContent = (asgBoxes.length && asgBoxes.every(b => b.checked)) ? 'Clear all' : 'Select all';
+    }
 
     const screen = h('div', {},
       topbar(`${ALL.length} questions · ${byAssign.length} assignments`, false),
       h('main', { class:'wrap' },
         h('section', { class:'hero anim' },
           h('h2', { text:'NPTEL Quiz Trainer' }),
-          h('p', { text:'Practice assignment-wise, random, or the complete test — with instant answers & explanations.' }),
+          h('p', { text:'Practice assignment-wise, random, selected assignments, or the complete test — with instant answers & explanations.' }),
           h('div', { class:'pill' },
             h('b', { text:String(ALL.length) }), 'questions',
             h('span', { text:'·' }),
@@ -425,10 +480,21 @@ button{font-family:inherit}
             h('div', { class:'grow' }),
             count,
             h('button', { class:'btn primary', onclick:()=>{
-                const n = Math.max(1, Math.min(ALL.length, +count.value || 20));
+                const n = Math.max(1, Math.min(ALL.length, +count.value || 50));
                 startQuiz(shuffle(ALL).slice(0, n), 'Random Test');
             } }, 'Start Test'),
             h('span', { class:'meta', text:'Timed pressure comes from you — stats live on the right' })
+          ),
+          // selected assignments
+          h('div', { class:'card mcard' },
+            h('div', { class:'ico' }, '🧩'),
+            h('h4', { text:'Selected Assignment Test' }),
+            h('p', { text:'Pick one or more assignments — questions appear in order, each tagged with its source assignment.' }),
+            h('div', { class:'grow' }),
+            h('div', { class:'asgsum' }, asgSum, asgToggle),
+            asgGrid,
+            startSel,
+            h('span', { class:'meta', text:'Each question shows a badge for the assignment it came from' })
           ),
           // complete
           h('div', { class:'card mcard' },
@@ -505,6 +571,7 @@ button{font-family:inherit}
 
     // main
     ui.badge   = h('span', { class:'badge', text:modeTitle });
+    ui.qAsg    = h('span', { class:'qasg hidden' });
     ui.qcount  = h('span', { class:'qcount' });
     ui.pfill   = h('div', { class:'pfill' });
     ui.qNo     = h('div', { class:'q-No' });
@@ -520,7 +587,7 @@ button{font-family:inherit}
     ui.bFin   = h('button', { class:'btn danger', onclick:confirmFinish }, 'Finish');
 
     const main = h('section', { class:'card anim' },
-      h('div', { class:'q-head' }, ui.badge, ui.qcount),
+      h('div', { class:'q-head' }, ui.badge, ui.qAsg, ui.qcount),
       h('div', { class:'ptrack' }, ui.pfill),
       ui.qNo, ui.qText, ui.opts, ui.fb, ui.explain,
       h('div', { class:'q-actions' }, ui.bPrev, ui.bSkip, ui.bNext, ui.bMark, ui.bFin)
@@ -542,6 +609,17 @@ button{font-family:inherit}
   function renderQ() {
     const q = qs[idx];
     ui.badge.textContent = modeTitle;
+    // per-question source badge when the set spans several assignments
+    if (qs.some(x => x.a !== q.a)) {
+      const hue = ((q.a - 1) * 30) % 360;
+      ui.qAsg.textContent = q.name || ('Assignment ' + q.a);
+      ui.qAsg.style.background  = `hsla(${hue},72%,60%,.16)`;
+      ui.qAsg.style.color       = `hsl(${hue},85%,78%)`;
+      ui.qAsg.style.borderColor = `hsla(${hue},85%,65%,.5)`;
+      ui.qAsg.classList.remove('hidden');
+    } else {
+      ui.qAsg.classList.add('hidden');
+    }
     ui.qcount.textContent = `Question ${idx+1} of ${qs.length}`;
     ui.pfill.style.width = `${Math.round(((idx+1)/qs.length)*100)}%`;
     ui.qNo.textContent = `Q${idx+1}`;
